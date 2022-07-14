@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Guidebook from "../components/Guidebook";
 import { Button, Collapse, Text, Grid } from "@nextui-org/react";
 
 export default function Home() {
