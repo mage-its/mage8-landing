@@ -14,7 +14,6 @@ const darkTheme = createTheme({
       primarySolidHover: "$green700",
       primarySolidContrast: "$white",
       primaryShadow: "$green500",
-      background: "#1B1B1B",
       selection: "#82D571",
       gradient:
         "linear-gradient(112deg, $blue100 -25%, $pink500 -10%, $purple500 80%)",
