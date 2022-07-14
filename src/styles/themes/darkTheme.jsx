@@ -3,6 +3,9 @@ import { createTheme, NextUIProvider } from "@nextui-org/react";
 const darkTheme = createTheme({
   type: "dark",
   theme: {
+    fonts: {
+      sans: "Poppins, sans-serif",
+    },
     colors: {
       primaryLight: "$green200",
       primaryLightHover: "$green300",
