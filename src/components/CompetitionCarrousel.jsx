@@ -15,37 +15,38 @@ export default function CompetitionCarrousel(compe){
 
     return (
         <>
-        <section className="carrousel h-full p-16">
-            
-            <div className="mx-auto relative">
+            <div className="relative">
                 {CompetitionData.map((competition,index)=>{
                     return (
                         <div className={index === current ? 'compe active' : 'compe'} key={index}>
                             {index === current && 
-                                <div className="content  bg-[#000] flex justify-center m-20 rounded-[50px] shadow-[-13px_4px_35px_rgba(84, 111, 221, 0.4)] p-6">
-                                    <div className="my-auto">
-                                        <img src={competition.image} alt={competition.title} />
-                                    </div>
-                                    <div className="py-20 px-10 w-1/2">
-                                        <h2 className="text-white text-4xl text-bold text-center">{competition.title}</h2>
-                                        <p className="text-white text-base text-center">{competition.data}</p>
-                                    </div>
-                                </div>
+                                <div className="px-20 py-10">
+                                    <Grid.Container gap={1} direction='row' justify="center" className="content p-20 bg-[#000] rounded-[50px]">
+                                        <Grid md={6} className="my-auto">
+                                            <img src={competition.image} alt={competition.title} />
+                                        </Grid>
+                                        <Grid md={6}  className="py-20 px-10">
+                                            <Grid.Container direction="column">
+                                            <h2 className="text-white text-4xl text-bold text-center">{competition.title}</h2>
+                                            <p className="text-white text-base text-center">{competition.data}</p>
+                                            </Grid.Container>
+                                            
+                                        </Grid>
+                                    </Grid.Container>
+                                </div>     
                             }
                         </div>
-                        
-                    )
+                        )
                 })}
                 <div className="absolute inset-0 flex">
-                    <div className="flex justify-start item-center w-1/2 my-auto ml-8">
+                    <div className="flex justify-start item-center w-1/2 my-auto ml-3">
                     <img className="w-[50px] h-[50px]" onClick={prevCompe} src="angle-left-solid.svg"/>
                     </div>
-                    <div className="flex justify-end item-center w-1/2 my-auto mr-8">
+                    <div className="flex justify-end item-center w-1/2 my-auto mr-3">
                     <img className="w-[50px] h-[50px]" onClick={nextCompe} src="angle-right-solid.svg"/>
                     </div>
                 </div>
             </div>
-        </section>
         </>
     )
 }
