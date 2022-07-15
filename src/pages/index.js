@@ -2,10 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import Guidebook from "../components/Guidebook";
 import { Button, Collapse, Text, Grid } from "@nextui-org/react";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
     <div>
+      <Navbar />
       <Grid.Container direction="column">
         <div className="px-8 py-32">
           <div className="grid gap-8 items-start justify-center">
