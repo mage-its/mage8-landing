@@ -179,7 +179,7 @@ export default function Navbar() {
             <li>
               <div className="flex ">
                 <div className="link-underline link-underline-black">
-                  <a> HOME</a>
+                  <a> ABOUT</a>
                 </div>
               </div>
             </li>
