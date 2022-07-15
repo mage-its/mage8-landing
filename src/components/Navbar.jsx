@@ -144,7 +144,7 @@ export default function Navbar() {
       </div>
       {menu && (
         <div
-          className={`w-full h-screen bg-black lg:bg-none fixed lg:static top-0 lg:h-auto p-10 lg:p-0 transition-all delay-100 ${
+          className={`lg:hidden w-full h-screen bg-black lg:bg-none fixed lg:static top-0 p-10 lg:p-0  delay-100 ${
             setMenu ? "left-0" : "-left-full"
           }`}
         >

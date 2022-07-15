@@ -7,7 +7,6 @@ import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <Grid.Container direction="column">
         <div className="px-8 py-32">
           <div className="grid gap-8 items-start justify-center">
