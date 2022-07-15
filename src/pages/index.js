@@ -8,7 +8,6 @@ import Navbar from "@/components/Navbar";
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <Grid.Container direction="column">
         <CompetitionCarrousel compe={CompetitionData}/>
         {/* <div className="px-8 py-32">
