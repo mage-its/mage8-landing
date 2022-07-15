@@ -144,18 +144,18 @@ export default function Navbar() {
       </div>
       {menu && (
         <div
-          className={`lg:hidden w-full h-screen bg-black lg:bg-none fixed lg:static top-0 p-10 lg:p-0  delay-100 ${
-            setMenu ? "left-0" : "-left-full"
+          className={` bg-black lg:hidden w-full h-screen lg:bg-none fixed  top-0 p-5 px-10 lg:p-0   transition-all duration-500 ease-in  ${
+            setMenu ? "left-0 " : "-left-[500px]"
           }`}
         >
           <button
-            className="absolute top-10 right-10 lg:hidden"
+            className="absolute top-5 right-10 lg:hidden"
             onClick={() => setMenu(false)}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="40"
+              height="40"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -170,26 +170,62 @@ export default function Navbar() {
           </button>
           <ul className="lg:space-x-14 flex lg:items-center flex-col lg:flex-row space-y-4 lg:space-y-0">
             <li>
-              <a> HOME</a>
+              <div className="flex ">
+                <div className="link-underline link-underline-black">
+                  <a> HOME</a>
+                </div>
+              </div>
             </li>
             <li>
-              <a> ABOUT</a>
+              <div className="flex ">
+                <div className="link-underline link-underline-black">
+                  <a> HOME</a>
+                </div>
+              </div>
             </li>
             <li className="relative flex flex-col">
-              <a onClick={() => setcompeMenu((state) => !state)}>
-                {" "}
-                COMPETITION
-              </a>
+              <div className="flex">
+                <div className=" flex link-underline link-underline-black">
+                  <div className="flex w-9/12">
+                    <a onClick={() => setcompeMenu((state) => !state)}>
+                      {" "}
+                      COMPETITION
+                    </a>
+                  </div>
+                  <div className="flex w-3/12 items-center ml-4">
+                    <TbTriangleInverted />
+                  </div>
+                </div>
+              </div>
+
               {compemenu &&
                 Competition.map((data, i) => <a key={i}> {data.compe}</a>)}
             </li>
             <li className="relative flex flex-col">
-              <a onClick={() => seteventMenu((state) => !state)}> EVENT</a>
+              <div className="flex">
+                <div className=" flex link-underline link-underline-black">
+                  <div className="flex w-8/12">
+                    {" "}
+                    <a onClick={() => seteventMenu((state) => !state)}>
+                      {" "}
+                      EVENT
+                    </a>
+                  </div>
+                  <div className="flex w-4/12 items-center ml-2">
+                    {" "}
+                    <TbTriangleInverted />
+                  </div>
+                </div>
+              </div>
               {eventmenu &&
                 Listevent.map((data, i) => <a key={i}> {data.event}</a>)}
             </li>
             <li>
-              <a> LOGIN</a>
+              <div className="flex ">
+                <div className="link-underline link-underline-black">
+                  <a> HOME</a>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
