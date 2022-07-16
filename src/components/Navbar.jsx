@@ -50,8 +50,7 @@ export default function Navbar() {
           </li>
           <li className="ml-28 relative ">
             <a
-              className="text-white text-lg font-semibold leading-7   "
-              href="#"
+              className="text-white text-lg font-semibold leading-7 "
               onClick={() => setdropDown((state) => !state)}
             >
               <div className="flex link-underline link-underline-black">
@@ -87,8 +86,7 @@ export default function Navbar() {
           </li>
           <li className="ml-28 relative">
             <a
-              className="text-white text-lg font-semibold leading-7   "
-              href="#"
+              className="text-white text-lg font-semibold leading-7"
               onClick={() => setdropdownEvent((state) => !state)}
             >
               {" "}
@@ -125,7 +123,7 @@ export default function Navbar() {
           </li>
           <li className="ml-28">
             <a
-              className="text-white text-lg font-semibold leading-7 primary px-4 py-2 rounded-full   "
+              className=" opacity-80 hover:opacity-100 shadow-inner text-white text-lg font-semibold leading-7 primary px-4 py-2 rounded-full   "
               href="#"
             >
               {" "}

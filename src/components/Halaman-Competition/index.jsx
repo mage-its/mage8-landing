@@ -18,14 +18,14 @@ export default function index(props) {
 
       <div className="flex items-center justify-center">
         <a
-          className=" mr-2 sm:mr-4 lg:mr-10 mt-4     text-white     sm:text-lg sm:leading-7   font-medium  primary px-2 py-2 sm:px-2 sm:py-4 rounded-full   "
+          className="mr-2 sm:mr-4 lg:mr-10 mt-4     text-white     sm:text-lg sm:leading-7   font-medium  primary px-2 py-2 sm:px-2 sm:py-4 rounded-full   "
           href="#"
         >
           {" "}
           Daftar Sekarang
         </a>
         <a
-          className="mt-4     text-white     sm:text-lg sm:leading-7   font-medium  primary px-1 py-2   sm:px-3 sm:py-4  rounded-full  "
+          className="mt-4  text-white  sm:text-lg sm:leading-7 font-medium primary px-1 py-2   sm:px-3 sm:py-4  rounded-full  "
           href="#"
         >
           {" "}
@@ -33,7 +33,7 @@ export default function index(props) {
         </a>
       </div>
       <div className="flex-col mt-20 container mx-auto px-10">
-        <TitleSubbab subbab={`About${props.judulCompe}`} />
+        <TitleSubbab subbab={`About ${props.judulCompe}`} />
         <h2 className="text-lg"> {props.deskripsiLomba}</h2>
       </div>
 
@@ -42,8 +42,8 @@ export default function index(props) {
         <h2 className="text-lg"> {props.deskripsiKategori}</h2>
       </div>
       <div className="flex-col mt-20 container mx-auto px-10">
-        <h1 className="text-2xl"></h1>
         <TitleSubbab subbab="Timeline Percobaan" />
+        <h1 className="text-2xl">{props.timeLinePercobaan}</h1>
       </div>
       <div className="flex-col mt-20 container mx-auto px-10">
         <h1 className="text-2xl"></h1>

@@ -23,7 +23,7 @@ export default function About() {
         </a>
       </div>
 
-      <div className="  mt-5 h-min flex flex col items-center justify-center">
+      <div className="  mt-20 h-min flex flex col items-center justify-center">
         {" "}
       </div>
       <div className="bg-black ">

@@ -14,6 +14,7 @@ export default function competition() {
         dan desktop."
         deskripsiKategori="Terbuka untuk siswa/i SMA/SMK/sederajat & Mahasiswa/i aktif program D3/D4/S1
         Kelompok (1 sampai 3 orang)"
+        timeLinePercobaan="32 Februari 2022"
         contactPerson="082 237 826 662 :)"
       />
       <Footer />
