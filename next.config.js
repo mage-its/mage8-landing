@@ -5,11 +5,11 @@ const nextConfig = {
       afterFiles: [
         {
           source: "/dashboard/:path*",
-          destination: "http://127.0.0.1:3001/:path*",
+          destination: "https://dashboard.mage-its.id/:path*",
         },
         {
           source: "/static/:path*",
-          destination: "http://127.0.0.1:3001/static/:path*",
+          destination: "http://dashboard.mage-its.id/static/:path*",
         },
       ],
     };
