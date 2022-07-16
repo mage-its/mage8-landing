@@ -6,7 +6,7 @@ const Competition = [
   { compe: "App Dev" },
   { compe: "Game Dev" },
   { compe: "IOT Dev" },
-  { compe: "Olimpiade" }
+  { compe: "Olimpiade" },
 ];
 
 const Listevent = [{ event: "Workshop" }, { event: "Webinar" }];
@@ -24,7 +24,7 @@ export default function Navbar() {
           alt="Logo-Mage"
           width={60}
           height={60}
-          src="/Logo-Mage.svg"
+          src="/static/logo/mage-whiteshade.png"
           className="pb-4"
         />
       </div>
