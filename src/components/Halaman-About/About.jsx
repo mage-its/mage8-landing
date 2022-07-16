@@ -7,7 +7,7 @@ export default function About() {
     <>
       <div className="flex flex-col items-center justify-center">
         <Image width={200} height={200} alt="logo-mage" src="/Logo-Mage8.svg" />
-        <Image width={500} height={500} alt="logo-mage" src="/Mage8.svg" />
+        <Image width={400} height={400} alt="logo-mage" src="/Mage8.svg" />
         <a
           className=" mt-4 text-white text-lg font-semibold leading-7  rounded-full  px-4 py-2 rounded-full   "
           href="#"
@@ -51,14 +51,18 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mb-4  ">
           <h1 className="font-medium text-4xl leading-tight"> Our Teaser</h1>
-          <Image
-            width={500}
-            height={500}
-            alt="logo-mage"
-            src="/Teaser-Mage.svg"
-          />
+          <iframe
+            width="500"
+            height="315"
+            src="https://www.youtube.com/embed/oU46IT7UFvI"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="mx-10"
+          ></iframe>
         </div>
       </div>
     </>
