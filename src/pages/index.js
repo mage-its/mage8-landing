@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="bg-black h-[100vh]">
       <Grid.Container direction="column">
-        <TitleSubbab subbab="Test Component"/>
+        <CompetitionCarrousel compe={CompetitionData}/>
         {/* <div className="px-8 py-32">
           <div className="grid gap-8 items-start justify-center">
             <div className="relative group">
