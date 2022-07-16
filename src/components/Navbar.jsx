@@ -161,8 +161,8 @@ export default function Navbar() {
           }`}
         >
           <button
-            className="absolute top-5 right-10 lg:hidden"
-            onClick={() => setMenu(false)}
+            className="absolute top-5 right-5 lg:hidden"
+            onClick={() => setMenu((state) => !state)}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -188,14 +188,14 @@ export default function Navbar() {
                 </div>
               </div>
             </li>
-            <li>
+            <li className="mt-4">
               <div className="flex ">
                 <div className="link-underline link-underline-black">
                   <a className="text-2xl font-semibold leading-7 "> ABOUT</a>
                 </div>
               </div>
             </li>
-            <li className="relative flex flex-col">
+            <li className="relative flex flex-col mt-4">
               <div className="flex">
                 <div className=" flex link-underline link-underline-black">
                   <div className="flex w-9/12">
@@ -209,10 +209,10 @@ export default function Navbar() {
                   </div>
                   <div
                     onClick={() => setcompeMenu((state) => !state)}
-                    className={`flex w-3/12 items-center ml-4 px-3 ${
+                    className={`flex w-3/12 items-center ml-10 ${
                       compemenu
-                        ? "rotate-180 duration-100"
-                        : "rotate-0 duration-100 "
+                        ? "rotate-180 duration-100 "
+                        : "rotate-0 duration-100  "
                     }`}
                   >
                     <TbTriangleInverted />
@@ -221,9 +221,14 @@ export default function Navbar() {
               </div>
 
               {compemenu &&
-                Competition.map((data, i) => <a key={i}> {data.compe}</a>)}
+                Competition.map((data, i) => (
+                  <a className="text-lg font-semibold leading-7" key={i}>
+                    {" "}
+                    {data.compe}
+                  </a>
+                ))}
             </li>
-            <li className="relative flex flex-col">
+            <li className="relative flex flex-col mt-4">
               <div className="flex">
                 <div className=" flex link-underline link-underline-black">
                   <div className="flex w-8/12">
@@ -238,7 +243,7 @@ export default function Navbar() {
                   </div>
                   <div
                     onClick={() => seteventMenu((state) => !state)}
-                    className={`flex w-4/12 items-center ml-5 ${
+                    className={`flex w-4/12 items-center ml-6 ${
                       eventmenu
                         ? "rotate-180 duration-100"
                         : "rotate-0 duration-100 "
@@ -250,10 +255,15 @@ export default function Navbar() {
                 </div>
               </div>
               {eventmenu &&
-                Listevent.map((data, i) => <a key={i}> {data.event}</a>)}
+                Listevent.map((data, i) => (
+                  <a className="text-lg font-semibold leading-7" key={i}>
+                    {" "}
+                    {data.event}
+                  </a>
+                ))}
             </li>
             <li>
-              <div className="flex mt-1 ">
+              <div className="flex mt-5 ">
                 <div className="flex">
                   <a className="text-2xl font-semibold leading-7  primary px-4 py-2 rounded-full ">
                     {" "}

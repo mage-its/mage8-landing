@@ -1,13 +1,14 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import CompetitionCarrousel from "@/components/CompetitionCarrousel";
-import { CompetitionData } from "@/components/CompetitionData";
+import About from "@/components/Halaman-About/About";
 export default function tesComponents() {
   return (
     <div>
       {" "}
       <Navbar />
-      <div className="mt-40 ">
+      <About />
+      <div className="">
         <CompetitionCarrousel compe={CompetitionData} />
       </div>
     </div>
