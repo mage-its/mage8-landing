@@ -60,3 +60,30 @@ a {
   background-position: 0 100%;
   background-repeat: no-repeat;
 }
+/* arrow bounce in about page */
+.arrowDown {
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from {
+      transform: translate3d(0, 0, 0);
+  }
+  to {
+      transform: translate3d(0, 15px, 0);
+  }
+}
+
+@-webkit-keyframes bounce {
+  from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+  }
+  to {
+      -webkit-transform: translate3d(0, 6px, 0);
+      transform: translate3d(0, 15px, 0);
+  }
+}

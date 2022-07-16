@@ -18,6 +18,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "tabler": "^1.0.0-alpha.8",
     "yup": "^0.32.11"
   },
   "devDependencies": {

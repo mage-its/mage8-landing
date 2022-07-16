@@ -6,7 +6,7 @@ const Competition = [
   { compe: "App Dev" },
   { compe: "Game Dev" },
   { compe: "IOT Dev" },
-  { compe: "Olimpiade" },
+  { compe: "Olimpiade" }
 ];
 
 const Listevent = [{ event: "Workshop" }, { event: "Webinar" }];
@@ -18,13 +18,13 @@ export default function Navbar() {
   const [compemenu, setcompeMenu] = useState();
   const [eventmenu, seteventMenu] = useState();
   return (
-    <div className="flex mx-auto px-10 sticky top-0 py-4 backdrop-blur-sm bg-white/5 z-50">
+    <div className="flex mx-auto px-10 sticky top-0 py-4 backdrop-blur-sm bg-white/5 z-50 rounded-b-[28px]">
       <div className="flex w-4/12  lg:w-3/12">
         <Image
           alt="Logo-Mage"
           width={60}
           height={60}
-          src="/static/logo/mage-whiteshade.png"
+          src="/Logo-Mage.svg"
           className="pb-4"
         />
       </div>
@@ -263,7 +263,7 @@ export default function Navbar() {
                 ))}
             </li>
             <li>
-              <div className="flex mt-5 ">
+              <div className="flex mt-4 ">
                 <div className="flex">
                   <a className="text-2xl font-semibold leading-7  primary px-4 py-2 rounded-full ">
                     {" "}

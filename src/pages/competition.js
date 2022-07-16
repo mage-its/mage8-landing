@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Competition from "@/components/Halaman-Competition";
+import Footer from "@/components/Footer";
 export default function competition() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function competition() {
         Kelompok (1 sampai 3 orang)"
         contactPerson="082 237 826 662 :)"
       />
+      <Footer />
     </>
   );
 }

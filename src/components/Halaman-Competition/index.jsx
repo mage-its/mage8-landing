@@ -7,25 +7,25 @@ import { CompetitionData } from "../CompetitionData";
 export default function index(props) {
   return (
     <>
-      <div className="  flex flex-col mt-20 flex items-center justify-center ">
+      <div className="  flex flex-col mt-10 flex items-center justify-center ">
         {" "}
-        <h1 className="font-bold lg:text-5xl leading-tight">
+        <h1 className="font-medium md:font-semibold lg:font-bold    text-sm sm:text-md md:text-2xl lg:text-5xl leading-tight">
           {" "}
-          {"About " + props.judulCompe + " Competition"}
+          {"About " + "" + props.judulCompe + " Competition"}
         </h1>
         <Image src="/Compe-AppDev.svg" alt="App-Dev" height={400} width={400} />
       </div>
 
       <div className="flex items-center justify-center">
         <a
-          className=" mr-10 mt-4 text-white sm:text-lg sm:font-semibold sm:leading-7 primary px-2 py-4 rounded-full   "
+          className=" mr-2 sm:mr-4 lg:mr-10 mt-4     text-white     sm:text-lg sm:leading-7   font-medium  primary px-2 py-2 sm:px-2 sm:py-4 rounded-full   "
           href="#"
         >
           {" "}
           Daftar Sekarang
         </a>
         <a
-          className="mt-4 text-white sm:text-lg sm:font-semibold sm:leading-7 primary px-2 py-4 rounded-full  "
+          className="mt-4     text-white     sm:text-lg sm:leading-7   font-medium  primary px-1 py-2   sm:px-3 sm:py-4  rounded-full  "
           href="#"
         >
           {" "}
