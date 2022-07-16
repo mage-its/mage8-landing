@@ -4,6 +4,7 @@ import CompetitionCarrousel from "../components/CompetitionCarrousel";
 import { CompetitionData } from "../components/CompetitionData";
 import TitleSubbab from "../components/Title"
 import { Button, Collapse, Text, Grid } from "@nextui-org/react";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
