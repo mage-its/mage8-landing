@@ -2,11 +2,13 @@
 const nextConfig = {
   async rewrites() {
     return {
-      afterFiles: [
+      beforeFiles: [
         {
           source: "/dashboard/:path*",
           destination: "https://dashboard.mage-its.id/:path*",
         },
+      ],
+      afterFiles: [
         {
           source: "/static/:path*",
           destination: "http://dashboard.mage-its.id/static/:path*",
