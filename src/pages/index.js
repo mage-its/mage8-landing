@@ -2,13 +2,14 @@ import Head from "next/head";
 import Image from "next/image";
 import CompetitionCarrousel from "../components/CompetitionCarrousel";
 import { CompetitionData } from "../components/CompetitionData";
+import TitleSubbab from "../components/Title"
 import { Button, Collapse, Text, Grid } from "@nextui-org/react";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-black h-[100vh]">
       <Grid.Container direction="column">
-        <CompetitionCarrousel compe={CompetitionData}/>
+        <TitleSubbab subbab="Test Component"/>
         {/* <div className="px-8 py-32">
           <div className="grid gap-8 items-start justify-center">
             <div className="relative group">
