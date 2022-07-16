@@ -4,7 +4,7 @@ const nextConfig = {
     return {
       beforeFiles: [
         {
-          source: "/:path*",
+          source: "/dashboard/:path*",
           destination: "https://dashboard.mage-its.id/dashboard/:path*",
         },
       ],
