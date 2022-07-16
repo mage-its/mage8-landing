@@ -13,8 +13,11 @@
     "3d-react-carousal": "^5.0.0",
     "next": "12.2.2",
     "next-themes": "^0.2.0",
+    "prop-types": "^15.8.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-chrono": "^1.17.2",
+    "react-dom": "18.2.0",
+    "react-horizontal-timeline": "^1.5.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
