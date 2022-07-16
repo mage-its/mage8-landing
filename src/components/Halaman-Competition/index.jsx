@@ -18,14 +18,14 @@ export default function index(props) {
 
       <div className="flex items-center justify-center">
         <a
-          className=" mr-10 mt-4 text-white text-lg font-semibold leading-7 primary px-4 py-2 rounded-full   "
+          className=" mr-10 mt-4 text-white sm:text-lg sm:font-semibold sm:leading-7 primary px-2 py-4 rounded-full   "
           href="#"
         >
           {" "}
           Daftar Sekarang
         </a>
         <a
-          className=" mt-4 text-white text-lg font-semibold leading-7 primary px-2 py-2 rounded-full   "
+          className="mt-4 text-white sm:text-lg sm:font-semibold sm:leading-7 primary px-2 py-4 rounded-full  "
           href="#"
         >
           {" "}

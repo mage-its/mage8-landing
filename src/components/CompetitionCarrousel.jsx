@@ -4,9 +4,7 @@ import { CompetitionData } from "./CompetitionData";
 
 export default function CompetitionCarrousel(compe){
     const [current,setCurrent] = useState(0)
-    const length = compe.compe.length
-    console.log("test", compe.compe.length);
-
+    const length = compe.compe.length;
     const prevCompe = () => {
         setCurrent(current === 0 ? length - 1 : current - 1)
     }
