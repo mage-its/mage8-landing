@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import CompetitionCarrousel from "../components/CompetitionCarrousel";
-import { CompetitionData } from "../components/CompetitionData";
+import { CompetitionData } from "../data/CompetitionData";
 import TitleSubbab from "../components/Title";
 import { Button, Collapse, Text, Grid } from "@nextui-org/react";
 import Navbar from "@/components/Navbar";

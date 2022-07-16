@@ -3,7 +3,7 @@ import Image from "next/image";
 import TitleSubbab from "@/components/Title";
 import Guidebook from "@/components/Guidebook";
 import CompetitionCarrousel from "@/components/CompetitionCarrousel";
-import { CompetitionData } from "../CompetitionData";
+import { CompetitionData } from "../../data/CompetitionData";
 export default function index(props) {
   return (
     <>
