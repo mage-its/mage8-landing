@@ -1,6 +1,6 @@
 import { Button, Card, Grid, Input, Spacer, Text } from "@nextui-org/react";
 import { IconX } from "@tabler/icons";
-import GoogleLogo from "@/assets/images/logo/googleLogo";
+import GoogleLogo from "@/assets/images/logo/GoogleLogo";
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
