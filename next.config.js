@@ -5,13 +5,7 @@ const nextConfig = {
       beforeFiles: [
         {
           source: "/:path*",
-          has: [
-            {
-              type: "host",
-              value: "dashboard.mage-its.id",
-            },
-          ],
-          destination: "/dashboard/:path*",
+          destination: "https://dashboard.mage-its.id/dashboard/:path*",
         },
       ],
     };
