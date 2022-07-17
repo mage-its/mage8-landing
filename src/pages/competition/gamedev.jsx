@@ -4,10 +4,12 @@ import Competition from "@/components/Halaman-Competition";
 import Footer from "@/components/Footer";
 import { CompetitionData } from "@/components/CompetitionData";
 import { DevcomTimeline } from "@/components/DataTimelineDevcom";
+import { SeoGameDev } from "@/components/Seo";
 
 export default function competition() {
   return (
     <>
+      <SeoGameDev/>
       <Navbar />
       <Competition
         gambar={CompetitionData[1].image}

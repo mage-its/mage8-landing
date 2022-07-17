@@ -4,9 +4,11 @@ import Competition from "@/components/Halaman-Competition";
 import Footer from "@/components/Footer";
 import { CompetitionData } from "@/components/CompetitionData";
 import { DataTimelineProxy } from "@/components/DataTimelineProxy";
+import { SeoOlimp } from "@/components/Seo";
 export default function competition() {
   return (
     <>
+    <SeoOlimp/>
       <Navbar />
       <Competition
         gambar={CompetitionData[3].image}
