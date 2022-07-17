@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Competition from "@/components/Halaman-Competition";
 import Footer from "@/components/Footer";
 import { CompetitionData } from "@/components/CompetitionData";
+import { DevcomTimeline } from "@/components/DataTimelineDevcom";
+
 export default function competition() {
   return (
     <>
@@ -13,6 +15,7 @@ export default function competition() {
         deskripsiLomba={CompetitionData[2].data}
         deskripsiKategori={CompetitionData[2].kategori}
         contactPerson={CompetitionData[2].kontak}
+        timeLinePercobaan={DevcomTimeline}
       />
       <Footer />
     </>

@@ -47,8 +47,16 @@ export default function index(props) {
         <h2 className="text-lg"> {props.deskripsiKategori}</h2>
       </div>
       <div className="flex-col mt-20 container mx-auto px-10">
-        <TitleSubbab subbab="Timeline Percobaan" />
-        <h1 className="text-2xl">{props.timeLinePercobaan}</h1>
+        <TitleSubbab subbab="Timeline Perlombaan" />
+        <h1 className="text-2xl">
+          {props.timeLinePercobaan.map((item, index) => {
+            return (
+              <div key={index}>
+                {item.judul}: {item.tanggal}
+              </div>
+            );
+          })}
+        </h1>
       </div>
       <div className="flex-col mt-20 container mx-auto px-10">
         <h1 className="text-2xl"></h1>
@@ -56,7 +64,6 @@ export default function index(props) {
         {props.contactPerson}
       </div>
       <Guidebook />
-      <CompetitionCarrousel compe={CompetitionData} />
     </>
   );
 }

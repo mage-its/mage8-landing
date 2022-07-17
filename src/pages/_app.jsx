@@ -3,6 +3,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import darkTheme from "../styles/themes/darkTheme";
 import NextNProgress from "nextjs-progressbar";
+import "react-toastify/dist/ReactToastify.css";
 
 function MyApp({ Component, pageProps }) {
   return (
