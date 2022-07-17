@@ -94,7 +94,7 @@ export const dataIoTDev = [
 export const dataProxy = [
     {
         pertanyaan : "Apa itu PROXY?",
-        jawaban: "PROXY adalah salah satu cabang lomba dalam MAGE kali ini yang berupa olimpiade pada bidang komputer yang dirancang untuk pelajar SMA/sederajat, untuk menguji kemampuan siswa/i Indonesia dalam menyelesaikan soal-soal terkait logika dan pemrograman"
+        jawaban: "PROXY adalah salah satu cabang lomba dalam MAGE kali ini yang berupa olimpiade pada bidang komputer yang dirancang untuk pelajar SMA/sederajat, untuk menguji kemampuan siswa/i Indonesia dalam menyelesaikan soal-soal terkait logika, pemrograman, dan fisika"
     },
     {
         pertanyaan : "Apa saja tahapan pada olimpiade ini?",
