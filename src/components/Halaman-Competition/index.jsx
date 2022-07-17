@@ -9,11 +9,11 @@ export default function index(props) {
     <>
       <div className="  flex flex-col mt-10 flex items-center justify-center ">
         {" "}
-        <h1 className="font-medium md:font-semibold lg:font-bold    text-sm sm:text-md md:text-2xl lg:text-5xl leading-tight">
+        <h1 className=" text-center font-bold  text-xl sm:text-4xl  leading-tight">
           {" "}
           {"About " + "" + props.judulCompe + " Competition"}
         </h1>
-        <Image src="/Compe-AppDev.svg" alt="App-Dev" height={400} width={400} />
+        <Image src={`/${props.gambar}` }alt={props.judulCompe} height={400} width={400} />
       </div>
 
       <div className="flex items-center justify-center">
@@ -29,7 +29,7 @@ export default function index(props) {
           href="#"
         >
           {" "}
-          Donwload Guidbook
+          Donwload Guidebook
         </a>
       </div>
       <div className="flex-col mt-20 container mx-auto px-10">

@@ -54,14 +54,14 @@ export default function About() {
         <div className="flex flex-col items-center justify-center mb-4  ">
           <h1 className="font-medium text-4xl leading-tight"> Our Teaser</h1>
           <iframe
-            width="500"
+            width="600"
             height="315"
             src="https://www.youtube.com/embed/oU46IT7UFvI"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="mx-10"
+            className=" sm:px-px px-40"
           ></iframe>
         </div>
       </div>
