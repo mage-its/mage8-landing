@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { TbTriangleInverted } from "react-icons/tb";
@@ -17,8 +17,34 @@ export default function Navbar() {
   const [menu, setMenu] = useState();
   const [compemenu, setcompeMenu] = useState();
   const [eventmenu, seteventMenu] = useState();
+  // func to change bg when scroll
+  const [changeBg, setchangeBg] = useState();
+  const [y, setY] = useState(50);
+
+  const handleNavigation = (e) => {
+    const window = e.currentTarget;
+    if (y > window.scrollY) {
+      setchangeBg(true);
+    } else if (y < window.scrollY) {
+      setchangeBg(false);
+    }
+    setY(window.scrollY);
+  };
+
+  useEffect(() => {
+    setY(window.scrollY);
+
+    window.addEventListener("scroll", (e) => handleNavigation(e));
+  }, []);
+  console.log("scroll y", y);
   return (
-    <div className="flex mx-auto px-10 sticky top-0 py-4 backdrop-blur-sm bg-white/5 z-50 rounded-b-[28px]">
+    <div
+      className={`flex mx-auto px-10 sticky top-0 py-4  z-50 rounded-b-[28px] ${
+        !changeBg
+          ? "backdrop-blur-sm bg-white/5"
+          : "bg-black  backdrop-blur-none"
+      }`}
+    >
       <div className="flex w-4/12  lg:w-3/12">
         <Image
           alt="Logo-Mage"
