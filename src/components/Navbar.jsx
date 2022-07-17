@@ -7,31 +7,31 @@ import { motion } from "framer-motion";
 const Competition = [
   {
     compe: "App Dev",
-    link:"https://www.mage-its.id/appdev"
+    link: "https://www.mage-its.id/appdev",
   },
-  { 
+  {
     compe: "Game Dev",
-    link:"https://www.mage-its.id/gamedev"
+    link: "https://www.mage-its.id/gamedev",
   },
   {
     compe: "IOT Dev",
-    link:"https://www.mage-its.id/iotdev"
+    link: "https://www.mage-its.id/iotdev",
   },
-  { 
+  {
     compe: "Olimpiade",
-    link:"https://www.mage-its.id/olim"
+    link: "https://www.mage-its.id/olim",
   },
 ];
 
 const Listevent = [
-  { 
+  {
     event: "Workshop",
-    link:"https://www.mage-its.id/workshop"
+    link: "https://www.mage-its.id/workshop",
   },
   {
     event: "Webinar",
-    link:"https://www.mage-its.id/webinar"
-  }
+    link: "https://www.mage-its.id/webinar",
+  },
 ];
 
 export default function Navbar() {
@@ -173,7 +173,7 @@ export default function Navbar() {
           <li className="ml-20">
             <a
               className="text-white text-md font-normal leading-7  link-underline link-underline-black "
-              href="https://www.mage-its.id/login"
+              href="/auth/login"
             >
               Login
             </a>
