@@ -2,15 +2,11 @@ import React from "react";
 import Image from "next/image";
 import TitleSubbab from "@/components/Title";
 import Guidebook from "@/components/Guidebook";
-import CompetitionCarrousel from "@/components/CompetitionCarrousel";
-import { CompetitionData } from "../../data/CompetitionData";
-export default function index(props) {
+export default function CompetitionLayout(props) {
   return (
     <>
-      <div className="  flex flex-col mt-10 flex items-center justify-center ">
-        {" "}
+      <div className="  flex flex-col mt-10 items-center justify-center ">
         <h1 className="font-medium md:font-semibold lg:font-bold    text-sm sm:text-md md:text-2xl lg:text-5xl leading-tight">
-          {" "}
           {"About " + "" + props.judulCompe + " Competition"}
         </h1>
         <Image src="/Compe-AppDev.svg" alt="App-Dev" height={400} width={400} />
@@ -21,14 +17,12 @@ export default function index(props) {
           className="mr-2 sm:mr-4 lg:mr-10 mt-4     text-white     sm:text-lg sm:leading-7   font-medium  primary px-2 py-2 sm:px-2 sm:py-4 rounded-full   "
           href="#"
         >
-          {" "}
           Daftar Sekarang
         </a>
         <a
           className="mt-4  text-white  sm:text-lg sm:leading-7 font-medium primary px-1 py-2   sm:px-3 sm:py-4  rounded-full  "
           href="#"
         >
-          {" "}
           Donwload Guidbook
         </a>
       </div>
@@ -51,7 +45,6 @@ export default function index(props) {
         {props.contactPerson}
       </div>
       <Guidebook />
-      <CompetitionCarrousel compe={CompetitionData} />
     </>
   );
 }

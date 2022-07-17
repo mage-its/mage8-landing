@@ -2,11 +2,13 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { TbTriangleInverted } from "react-icons/tb";
+import { Button } from "@nextui-org/react";
+import { motion } from "framer-motion";
 const Competition = [
   { compe: "App Dev" },
   { compe: "Game Dev" },
   { compe: "IOT Dev" },
-  { compe: "Olimpiade" }
+  { compe: "Olimpiade" },
 ];
 
 const Listevent = [{ event: "Workshop" }, { event: "Webinar" }];
@@ -18,44 +20,41 @@ export default function Navbar() {
   const [compemenu, setcompeMenu] = useState();
   const [eventmenu, seteventMenu] = useState();
   return (
-    <div className="flex mx-auto px-10 sticky top-0 py-4 backdrop-blur-sm bg-white/5 z-50 rounded-b-[28px]">
-      <div className="flex w-4/12  lg:w-3/12">
+    <nav className="flex px-10 fixed w-full left-0 top-0 py-5 backdrop-blur-sm bg-black/0 z-50 ">
+      <div className="flex w-4/12 lg:w-3/12">
         <Image
           alt="Logo-Mage"
           width={60}
           height={60}
-          src="/Logo-Mage.svg"
+          src="/static/logo/mage-whiteshade.png"
           className="pb-4"
         />
       </div>
-      <div className="flex  lg:w-9/12 w-8/12 justify-end items-center self-center mt-5 ">
+      <div className="flex lg:w-9/12 w-8/12 justify-end items-center self-center mt-5 ">
         <ul className="flex-row hidden lg:flex ">
-          <li className="ml-28">
+          <li className="ml-20">
             <a
-              className="text-white text-lg font-semibold leading-7  link-underline link-underline-black "
+              className="text-white text-md font-normal leading-7  link-underline link-underline-black "
               href="#"
             >
-              {" "}
-              HOME
+              Home
             </a>
           </li>
-          <li className="ml-28">
+          <li className="ml-20">
             <a
-              className="text-white text-lg font-semibold leading-7  link-underline link-underline-black "
+              className="text-white text-md font-normal leading-7  link-underline link-underline-black "
               href="#"
             >
-              {" "}
-              ABOUT
+              About
             </a>
           </li>
-          <li className="ml-28 relative ">
+          <li className="ml-20 relative ">
             <a
-              className="text-white text-lg font-semibold leading-7 "
+              className="text-white text-md font-normal leading-7 "
               onClick={() => setdropDown((state) => !state)}
             >
               <div className="flex link-underline link-underline-black">
-                {" "}
-                <div className="flex w-10/12">COMPETITION</div>{" "}
+                <div className="flex w-10/12">Competiton</div>
                 <div
                   className={`flex w-2/12 items-center ml-4  mt-0.5 ${
                     dropDown
@@ -64,11 +63,16 @@ export default function Navbar() {
                   }`}
                 >
                   <TbTriangleInverted />
-                </div>{" "}
+                </div>
               </div>
             </a>
             {dropDown && (
-              <ul className="absolute  top-16 delay-100 ">
+              <motion.ul
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                exit={{ opacity: 0 }}
+                className="absolute top-16 "
+              >
                 {Competition.map((data, i) => (
                   <li
                     key={i}
@@ -81,18 +85,16 @@ export default function Navbar() {
                     </Link>
                   </li>
                 ))}
-              </ul>
+              </motion.ul>
             )}
           </li>
-          <li className="ml-28 relative">
+          <li className="ml-20 relative">
             <a
-              className="text-white text-lg font-semibold leading-7"
+              className="text-white text-md font-normal leading-7"
               onClick={() => setdropdownEvent((state) => !state)}
             >
-              {" "}
               <div className="flex link-underline link-underline-black">
-                {" "}
-                <div className="flex w-9/12">EVENT</div>{" "}
+                <div className="flex w-9/12">Event</div>
                 <div
                   className={`flex w-3/12 items-center ml-4 mt-0.5 ${
                     dropDownEvent
@@ -101,7 +103,7 @@ export default function Navbar() {
                   }`}
                 >
                   <TbTriangleInverted />
-                </div>{" "}
+                </div>
               </div>
             </a>
             {dropDownEvent && (
@@ -121,14 +123,8 @@ export default function Navbar() {
               </ul>
             )}
           </li>
-          <li className="ml-28">
-            <a
-              className=" opacity-80 hover:opacity-100 shadow-inner text-white text-lg font-semibold leading-7 primary px-4 py-2 rounded-full   "
-              href="#"
-            >
-              {" "}
-              LOGIN
-            </a>
+          <li className="ml-20">
+            <Button auto>Login</Button>
           </li>
         </ul>
       </div>
@@ -154,7 +150,7 @@ export default function Navbar() {
       </div>
       {menu && (
         <div
-          className={`  overflow-hidden  bg-black lg:hidden w-full h-screen lg:bg-none fixed  top-0 p-7 px-5 lg:p-0   transition-all duration-500 ease-in  ${
+          className={`  overflow-hidden  bg-black/90 lg:hidden w-full h-screen lg:bg-none fixed  top-0 p-7 px-5 lg:p-0   transition-all duration-500 ease-in  ${
             setMenu ? "left-0 " : "-left-[500px]"
           }`}
         >
@@ -201,8 +197,7 @@ export default function Navbar() {
                       className="text-2xl font-semibold leading-7 "
                       onClick={() => setcompeMenu((state) => !state)}
                     >
-                      {" "}
-                      COMPETITION
+                      Competition
                     </a>
                   </div>
                   <div
@@ -220,8 +215,7 @@ export default function Navbar() {
 
               {compemenu &&
                 Competition.map((data, i) => (
-                  <a className="text-lg font-semibold leading-7" key={i}>
-                    {" "}
+                  <a className="text-md font-normal leading-7" key={i}>
                     {data.compe}
                   </a>
                 ))}
@@ -230,13 +224,11 @@ export default function Navbar() {
               <div className="flex">
                 <div className=" flex link-underline link-underline-black">
                   <div className="flex w-8/12">
-                    {" "}
                     <a
                       className="text-2xl font-semibold leading-7 "
                       onClick={() => seteventMenu((state) => !state)}
                     >
-                      {" "}
-                      EVENT
+                      Event
                     </a>
                   </div>
                   <div
@@ -247,15 +239,13 @@ export default function Navbar() {
                         : "rotate-0 duration-100 "
                     }`}
                   >
-                    {" "}
                     <TbTriangleInverted />
                   </div>
                 </div>
               </div>
               {eventmenu &&
                 Listevent.map((data, i) => (
-                  <a className="text-lg font-semibold leading-7" key={i}>
-                    {" "}
+                  <a className="text-md font-normal leading-7" key={i}>
                     {data.event}
                   </a>
                 ))}
@@ -264,8 +254,7 @@ export default function Navbar() {
               <div className="flex mt-4 ">
                 <div className="flex">
                   <a className="text-2xl font-semibold leading-7  primary px-4 py-2 rounded-full ">
-                    {" "}
-                    LOGIN
+                    Login
                   </a>
                 </div>
               </div>
@@ -273,6 +262,6 @@ export default function Navbar() {
           </ul>
         </div>
       )}
-    </div>
+    </nav>
   );
 }
