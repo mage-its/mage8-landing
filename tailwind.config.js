@@ -6,10 +6,24 @@ module.exports = {
   ],
   theme: {
     extend: {
+      linearBorderGradients: ({ theme }) => ({
+        colors: {
+          "light-blue": theme("colors.blue.500"),
+        },
+        background: theme("colors"),
+      }),
       backgroundImage: {
-        "login-background": 'url("/static/images/login-background.png")',
-        "single-dark-background":
-          'url("/static/images/background-dark-single.jpg")',
+        "login-background": 'url("/static/background/login-background.png")',
+        "footer-b-background":
+          'url("/static/background/bottom-background.svg")',
+        "top-background": 'url("/static/background/dark-main-background.jpg")',
+        "main-l-blob": 'url("/static/background/left-blob-background.svg")',
+        "main-r-blob":
+          'url("/static/background/main-right-blob-background.svg")',
+        "main-b-circle": 'url("/static/background/main-b-circle.svg")',
+        "main-tr-circle": 'url("/static/background/main-tr-circle.svg")',
+        "main-gradient-rectangle":
+          'url("/static/background/main-gradient-rectangle.svg")',
       },
     },
     animation: {
@@ -43,5 +57,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-border-gradient-radius")],
 };

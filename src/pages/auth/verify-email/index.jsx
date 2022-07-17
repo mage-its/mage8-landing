@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 function VerifyEmail({ success }) {
   return (
-    <div className="h-screen bg-single-dark-background bg-cover">
+    <div className="h-screen bg-bottom-background bg-cover">
       <Navbar />
       {success ? (
         <Grid.Container

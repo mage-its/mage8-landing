@@ -14,7 +14,7 @@ function Login() {
   };
 
   return (
-    <div className="h-screen bg-single-dark-background bg-cover">
+    <div className="h-screen bg-bottom-background bg-cover">
       <Grid.Container
         direction="row"
         className="h-screen w-screen"

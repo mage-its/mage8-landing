@@ -21,7 +21,8 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "react-toastify": "^9.0.5",
-    "tabler": "^1.0.0-alpha.8",
+    "sharp": "^0.30.7",
+    "tailwindcss-border-gradient-radius": "^3.0.1",
     "yup": "^0.32.11"
   },
   "devDependencies": {

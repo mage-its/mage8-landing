@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-import Competition from "@/components/Halaman-Competition";
+import Competition from "@/layout/CompetitionLayout";
 import Footer from "@/components/Footer";
 export default function competition() {
   return (
