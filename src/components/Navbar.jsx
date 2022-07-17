@@ -19,7 +19,7 @@ export default function Navbar() {
   const [eventmenu, seteventMenu] = useState();
   // func to change bg when scroll
   const [changeBg, setchangeBg] = useState();
-  const [y, setY] = useState(530);
+  const [y, setY] = useState(500);
 
   const handleNavigation = (e) => {
     const window = e.currentTarget;
@@ -29,6 +29,7 @@ export default function Navbar() {
       setchangeBg(false);
     }
     setY(window.scrollY);
+    return y;
   };
 
   useEffect(() => {
@@ -36,7 +37,6 @@ export default function Navbar() {
 
     window.addEventListener("scroll", (e) => handleNavigation(e));
   }, []);
-  console.log("scroll y", y);
   return (
     <div
       className={`flex mx-auto px-10 sticky top-0 py-4  z-50 rounded-b-[28px] ${
