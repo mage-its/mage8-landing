@@ -24,7 +24,7 @@ export default function VerifyEmail() {
   };
 
   return (
-    <div className="h-screen bg-bottom-background bg-cover">
+    <div className="h-screen footer-b-background bg-cover">
       <Grid.Container
         direction="row"
         className="h-screen w-screen"
