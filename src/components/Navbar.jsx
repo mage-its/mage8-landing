@@ -5,13 +5,34 @@ import { TbTriangleInverted } from "react-icons/tb";
 import { Button } from "@nextui-org/react";
 import { motion } from "framer-motion";
 const Competition = [
-  { compe: "App Dev" },
-  { compe: "Game Dev" },
-  { compe: "IOT Dev" },
-  { compe: "Olimpiade" },
+  {
+    compe: "App Dev",
+    link:"https://www.mage-its.id/appdev"
+  },
+  { 
+    compe: "Game Dev",
+    link:"https://www.mage-its.id/gamedev"
+  },
+  {
+    compe: "IOT Dev",
+    link:"https://www.mage-its.id/iotdev"
+  },
+  { 
+    compe: "Olimpiade",
+    link:"https://www.mage-its.id/olim"
+  },
 ];
 
-const Listevent = [{ event: "Workshop" }, { event: "Webinar" }];
+const Listevent = [
+  { 
+    event: "Workshop",
+    link:"https://www.mage-its.id/workshop"
+  },
+  {
+    event: "Webinar",
+    link:"https://www.mage-its.id/webinar"
+  }
+];
 
 export default function Navbar() {
   const [dropDown, setdropDown] = useState();
@@ -61,7 +82,7 @@ export default function Navbar() {
           <li className="ml-20">
             <a
               className="text-white text-md font-normal leading-7  link-underline link-underline-black "
-              href="#"
+              href="https://www.mage-its.id"
             >
               Home
             </a>
@@ -69,7 +90,7 @@ export default function Navbar() {
           <li className="ml-20">
             <a
               className="text-white text-md font-normal leading-7  link-underline link-underline-black "
-              href="#"
+              href="https://www.mage-its.id/about"
             >
               About
             </a>
@@ -104,7 +125,7 @@ export default function Navbar() {
                     key={i}
                     className="w-[200px] bg-gray-800 rounded shadow-2xl  "
                   >
-                    <Link href="#">
+                    <Link href={data.link}>
                       <a className="flex py-3 px-6 hover:bg-gray-700/60 text-white">
                         {data.compe}
                       </a>
@@ -139,7 +160,7 @@ export default function Navbar() {
                     key={i}
                     className=" w-[150px] bg-gray-800  rounded shadow-2xl "
                   >
-                    <Link href="#">
+                    <Link href={data.link}>
                       <a className="flex py-3 px-6 hover:bg-gray-700/60 text-white ">
                         {data.event}
                       </a>
@@ -152,7 +173,7 @@ export default function Navbar() {
           <li className="ml-20">
             <a
               className="text-white text-md font-normal leading-7  link-underline link-underline-black "
-              href="#"
+              href="https://www.mage-its.id/login"
             >
               Login
             </a>

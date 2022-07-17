@@ -37,7 +37,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://mage-its.id/competition/appdev"
+                  href="https://mage-its.id/competition/gamedev"
                   className="hover:underline"
                 >
                   Game Development
