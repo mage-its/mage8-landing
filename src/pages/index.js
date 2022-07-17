@@ -6,6 +6,7 @@ import TitleSubbab from "../components/Title"
 import {data} from "../components/DataTimelineDevcom"
 import Timeline from "@/components/Timeline";
 import { Button, Collapse, Text, Grid } from "@nextui-org/react";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (

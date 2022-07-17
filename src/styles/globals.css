@@ -6,8 +6,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -17,4 +16,74 @@ a {
 
 * {
   box-sizing: border-box;
+}
+/* Navbar hover underline */
+.primary{
+  background-color: #A0E880;
+}
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .5s ease-in-out;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#A0E880, #A0E880)
+}
+
+.link-underline:hover {
+  
+  background-size: 100% 3px;
+  background-position: 0 100%
+}
+
+.link-underline-none {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-size: 0 3px;
+  background-position: 0 1000%;
+  background-repeat: no-repeat;
+  transition: background-size .5s ease-in-out;
+}
+
+.link-underline-black-none {
+  border-bottom-width: 0;
+}
+
+.line{
+  
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#A0E880, #A0E880);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+/* arrow bounce in about page */
+.arrowDown {
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from {
+      transform: translate3d(0, 0, 0);
+  }
+  to {
+      transform: translate3d(0, 15px, 0);
+  }
+}
+
+@-webkit-keyframes bounce {
+  from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+  }
+  to {
+      -webkit-transform: translate3d(0, 6px, 0);
+      transform: translate3d(0, 15px, 0);
+  }
 }

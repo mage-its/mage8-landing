@@ -10,14 +10,23 @@
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.9",
-    "3d-react-carousal": "^5.0.0",
+    "@tabler/icons": "^1.75.0",
+    "formik": "^2.2.9",
+    "framer-motion": "^6.5.1",
     "next": "12.2.2",
     "next-themes": "^0.2.0",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
+<<<<<<< HEAD
     "react-chrono": "^1.17.2",
     "react-dom": "18.2.0",
     "react-horizontal-timeline": "^1.5.3"
+=======
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "tabler": "^1.0.0-alpha.8",
+    "yup": "^0.32.11"
+>>>>>>> 23108bfeeb6f61c63f7c51a655fc80a8d988c68e
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
