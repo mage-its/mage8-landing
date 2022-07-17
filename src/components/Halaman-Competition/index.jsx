@@ -2,10 +2,12 @@ import React from "react";
 import Image from "next/image";
 import TitleSubbab from "@/components/Title";
 import Guidebook from "@/components/Guidebook";
-export default function CompetitionLayout(props) {
+import CompetitionCarrousel from "@/components/CompetitionCarrousel";
+import { CompetitionData } from "../CompetitionData";
+export default function index(props) {
   return (
     <>
-      <div className="  flex flex-col mt-10 items-center justify-center ">
+      <div className="  flex flex-col mt-10 flex items-center justify-center ">
         {" "}
         <h1 className=" text-center font-bold  text-xl sm:text-4xl  leading-tight">
           {" "}
@@ -24,6 +26,7 @@ export default function CompetitionLayout(props) {
           className="mr-2 sm:mr-4 lg:mr-10 mt-4     text-white     sm:text-lg sm:leading-7   font-medium  primary px-2 py-2 sm:px-2 sm:py-4 rounded-full   "
           href="#"
         >
+          {" "}
           Daftar Sekarang
         </a>
         <a
@@ -53,6 +56,7 @@ export default function CompetitionLayout(props) {
         {props.contactPerson}
       </div>
       <Guidebook />
+      <CompetitionCarrousel compe={CompetitionData} />
     </>
   );
 }

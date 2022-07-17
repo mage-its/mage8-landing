@@ -41,14 +41,13 @@ export default function Navbar() {
   }, []);
   return (
     <div
-      className={`flex mx-auto px-10 sticky top-0 py-4  z-50 rounded-b-[28px] ${
+      className={`flex mx-auto px-10 fixed w-full left-0 top-0 py-4  z-50 rounded-b-[28px] ${
         !changeBg
           ? "backdrop-blur-sm bg-white/5 duration-100"
-          : "bg-black  backdrop-blur-sm duration-100"
+          : "bg-transparent  backdrop-blur-sm duration-100"
       }`}
     >
       <div className="flex w-4/12  lg:w-3/12">
-
         <Image
           alt="Logo-Mage"
           width={60}
@@ -151,7 +150,12 @@ export default function Navbar() {
             )}
           </li>
           <li className="ml-20">
-            <Button auto>Login</Button>
+            <a
+              className="text-white text-md font-normal leading-7  link-underline link-underline-black "
+              href="#"
+            >
+              Login
+            </a>
           </li>
         </ul>
       </div>
@@ -177,10 +181,8 @@ export default function Navbar() {
       </div>
       {menu && (
         <div
-
           className={`  overflow-hidden  bg-black lg:hidden w-full h-screen lg:bg-none fixed  top-0 p-7 px-5 lg:p-0   transition-all duration-500 ease-in  ${
             setMenu ? "left-0 duration-100 " : "-left-[500px] duration-100"
-
           }`}
         >
           <button
