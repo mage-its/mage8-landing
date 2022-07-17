@@ -19,7 +19,7 @@ export default function Navbar() {
   const [eventmenu, seteventMenu] = useState();
   // func to change bg when scroll
   const [changeBg, setchangeBg] = useState();
-  const [y, setY] = useState(50);
+  const [y, setY] = useState(530);
 
   const handleNavigation = (e) => {
     const window = e.currentTarget;
@@ -41,8 +41,8 @@ export default function Navbar() {
     <div
       className={`flex mx-auto px-10 sticky top-0 py-4  z-50 rounded-b-[28px] ${
         !changeBg
-          ? "backdrop-blur-sm bg-white/5"
-          : "bg-black  backdrop-blur-none"
+          ? "backdrop-blur-sm bg-white/5 duration-100"
+          : "bg-black  backdrop-blur-sm duration-100"
       }`}
     >
       <div className="flex w-4/12  lg:w-3/12">
