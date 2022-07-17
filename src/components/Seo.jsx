@@ -24,6 +24,35 @@ export const SeoMain = () => {
             crossOrigin: "anonymous"
           }
         ]}
+        openGraph={{
+          url: "",
+          title: "",
+          description: "",
+          images: [
+            {
+              url: "",
+              width: 800,
+              height: 600,
+              alt: "Og Image Alt",
+              type: "image/jpeg"
+            },
+            {
+              url: "",
+              width: 900,
+              height: 800,
+              alt: "Og Image Alt Second",
+              type: "image/jpeg"
+            },
+            { url: "" },
+            { url: "" }
+          ],
+          site_name: "SiteName"
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image"
+        }}
       />
     </div>
   );
@@ -54,6 +83,35 @@ export const SeoAbout = () => {
             crossOrigin: "anonymous"
           }
         ]}
+        openGraph={{
+          url: "",
+          title: "",
+          description: "",
+          images: [
+            {
+              url: "",
+              width: 800,
+              height: 600,
+              alt: "Og Image Alt",
+              type: "image/jpeg"
+            },
+            {
+              url: "",
+              width: 900,
+              height: 800,
+              alt: "Og Image Alt Second",
+              type: "image/jpeg"
+            },
+            { url: "" },
+            { url: "" }
+          ],
+          site_name: "SiteName"
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image"
+        }}
       />
     </div>
   );
@@ -84,6 +142,35 @@ export const SeoAppDev = () => {
             crossOrigin: "anonymous"
           }
         ]}
+        openGraph={{
+          url: "",
+          title: "",
+          description: "",
+          images: [
+            {
+              url: "",
+              width: 800,
+              height: 600,
+              alt: "Og Image Alt",
+              type: "image/jpeg"
+            },
+            {
+              url: "",
+              width: 900,
+              height: 800,
+              alt: "Og Image Alt Second",
+              type: "image/jpeg"
+            },
+            { url: "" },
+            { url: "" }
+          ],
+          site_name: "SiteName"
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image"
+        }}
       />
     </div>
   );
@@ -114,6 +201,35 @@ export const SeoGameDev = () => {
             crossOrigin: "anonymous"
           }
         ]}
+        openGraph={{
+          url: "",
+          title: "",
+          description: "",
+          images: [
+            {
+              url: "",
+              width: 800,
+              height: 600,
+              alt: "Og Image Alt",
+              type: "image/jpeg"
+            },
+            {
+              url: "",
+              width: 900,
+              height: 800,
+              alt: "Og Image Alt Second",
+              type: "image/jpeg"
+            },
+            { url: "" },
+            { url: "" }
+          ],
+          site_name: "SiteName"
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image"
+        }}
       />
     </div>
   );
@@ -144,6 +260,35 @@ export const SeoIotDev = () => {
             crossOrigin: "anonymous"
           }
         ]}
+        openGraph={{
+          url: "",
+          title: "",
+          description: "",
+          images: [
+            {
+              url: "",
+              width: 800,
+              height: 600,
+              alt: "Og Image Alt",
+              type: "image/jpeg"
+            },
+            {
+              url: "",
+              width: 900,
+              height: 800,
+              alt: "Og Image Alt Second",
+              type: "image/jpeg"
+            },
+            { url: "" },
+            { url: "" }
+          ],
+          site_name: "SiteName"
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image"
+        }}
       />
     </div>
   );
@@ -174,6 +319,35 @@ export const SeoOlimp = () => {
             crossOrigin: "anonymous"
           }
         ]}
+        openGraph={{
+          url: "",
+          title: "",
+          description: "",
+          images: [
+            {
+              url: "",
+              width: 800,
+              height: 600,
+              alt: "Og Image Alt",
+              type: "image/jpeg"
+            },
+            {
+              url: "",
+              width: 900,
+              height: 800,
+              alt: "Og Image Alt Second",
+              type: "image/jpeg"
+            },
+            { url: "" },
+            { url: "" }
+          ],
+          site_name: "SiteName"
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image"
+        }}
       />
     </div>
   );
