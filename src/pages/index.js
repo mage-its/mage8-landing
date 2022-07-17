@@ -3,14 +3,16 @@ import Image from "next/image";
 import CompetitionCarrousel from "../components/CompetitionCarrousel";
 import { CompetitionData } from "../components/CompetitionData";
 import TitleSubbab from "../components/Title"
+import {data} from "../components/DataTimelineDevcom"
+import Timeline from "@/components/Timeline";
 import { Button, Collapse, Text, Grid } from "@nextui-org/react";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <div className="bg-black h-[100vh]">
+    <div className="bg-black">
       <Grid.Container direction="column">
-        <CompetitionCarrousel compe={CompetitionData}/>
+        <Timeline data={data}/>
         {/* <div className="px-8 py-32">
           <div className="grid gap-8 items-start justify-center">
             <div className="relative group">
