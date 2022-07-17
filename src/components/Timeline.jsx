@@ -1,5 +1,3 @@
-import { data } from "./DataTimelineProxy"
-
 export default function Timeline(props){
   return (
     <>

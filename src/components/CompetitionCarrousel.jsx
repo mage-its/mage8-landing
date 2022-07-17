@@ -36,7 +36,7 @@ export default function CompetitionCarrousel(compe){
                           className="flex justify-center my-auto mx-auto"
                         >
                           <img
-                            src={competition.image}
+                            src={`/${competition.image}`}
                             alt={competition.title}
                           />
                         </Grid>

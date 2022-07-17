@@ -13,7 +13,7 @@ export default function index(props) {
           {" "}
           {"About " + "" + props.judulCompe + " Competition"}
         </h1>
-        <Image src="/Compe-AppDev.svg" alt="App-Dev" height={400} width={400} />
+        <Image src={`/${props.gambar}` }alt={props.judulCompe} height={400} width={400} />
       </div>
 
       <div className="flex items-center justify-center">
@@ -29,7 +29,7 @@ export default function index(props) {
           href="#"
         >
           {" "}
-          Donwload Guidbook
+          Donwload Guidebook
         </a>
       </div>
       <div className="flex-col mt-20 container mx-auto px-10">
