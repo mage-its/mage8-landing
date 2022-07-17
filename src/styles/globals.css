@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -18,44 +27,46 @@ a {
   box-sizing: border-box;
 }
 /* Navbar hover underline */
-.primary{
-  background-color: #A0E880;
+.primary {
+  background-color: #a0e880;
 }
 .link-underline {
   border-bottom-width: 0;
-  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
   background-size: 0 3px;
   background-position: 0 100%;
   background-repeat: no-repeat;
-  transition: background-size .5s ease-in-out;
+  transition: background-size 0.5s ease-in-out;
 }
 
 .link-underline-black {
-  background-image: linear-gradient(transparent, transparent), linear-gradient(#A0E880, #A0E880)
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#a0e880, #a0e880);
 }
 
 .link-underline:hover {
-  
   background-size: 100% 3px;
-  background-position: 0 100%
+  background-position: 0 100%;
 }
 
 .link-underline-none {
   border-bottom-width: 0;
-  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
   background-size: 0 3px;
   background-position: 0 1000%;
   background-repeat: no-repeat;
-  transition: background-size .5s ease-in-out;
+  transition: background-size 0.5s ease-in-out;
 }
 
 .link-underline-black-none {
   border-bottom-width: 0;
 }
 
-.line{
-  
-  background-image: linear-gradient(transparent, transparent), linear-gradient(#A0E880, #A0E880);
+.line {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#a0e880, #a0e880);
   background-size: 0 3px;
   background-position: 0 100%;
   background-repeat: no-repeat;
@@ -64,26 +75,26 @@ a {
 .arrowDown {
   animation: bounce 0.5s;
   animation-direction: alternate;
-  animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
   animation-iteration-count: infinite;
 }
 
 @keyframes bounce {
   from {
-      transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
   to {
-      transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
   }
 }
 
 @-webkit-keyframes bounce {
   from {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
   to {
-      -webkit-transform: translate3d(0, 6px, 0);
-      transform: translate3d(0, 15px, 0);
+    -webkit-transform: translate3d(0, 6px, 0);
+    transform: translate3d(0, 15px, 0);
   }
 }

@@ -9,10 +9,9 @@ export default function About() {
         <Image width={200} height={200} alt="logo-mage" src="/Logo-Mage8.svg" />
         <Image width={400} height={400} alt="logo-mage" src="/Mage8.svg" />
         <a
-          className=" mt-4 text-white text-lg font-semibold leading-7  rounded-full  px-4 py-2 rounded-full   "
+          className=" mt-4 text-white text-lg font-semibold leading-7  px-4 py-2 rounded-full   "
           href="#"
         >
-          {" "}
           <Image
             width={50}
             height={50}
@@ -23,9 +22,7 @@ export default function About() {
         </a>
       </div>
 
-      <div className="  mt-20 h-min flex flex col items-center justify-center">
-        {" "}
-      </div>
+      <div className="  mt-20 h-min flex col items-center justify-center"></div>
       <div className="bg-black ">
         <div className="container px-6 py-4 mx-auto lg:flex lg:h-128 lg:py-16 ">
           <div className="flex flex-col items-center w-full lg:flex-row lg:w-4/12">

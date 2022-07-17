@@ -5,16 +5,12 @@ import Footer from "@/components/Footer";
 export default function about() {
   return (
     <>
-      <div className="">
-        {" "}
+      <div className="h-min">
+        <Navbar />
         <div className="h-min">
-          <Navbar />
-          <div className="h-min">
-            {" "}
-            <About />
-          </div>
-          <Footer />
+          <About />
         </div>
+        <Footer />
       </div>
     </>
   );

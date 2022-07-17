@@ -155,15 +155,49 @@ function ForgotPasswordSection({ setState }) {
   );
 }
 
-export default function LoginRegisterDialog({ children }) {
-  const [state, setState] = useState("login"); // login || register || forgotPassword
+function ResetPassword({ setState }) {
+  return (
+    <div className="mt-28 mb-36">
+      <Grid.Container direction="column" className="px-12">
+        <Text weight="light" size={14}>
+          Password baru
+        </Text>
+        <Input.Password
+          placeholder="Masukkan password baru"
+          size="md"
+        ></Input.Password>
+        <Spacer y={1} />
+        <Text weight="light" size={14}>
+          Konfimrasi password
+        </Text>
+        <Input.Password
+          placeholder="Konfirmasi password baru"
+          size="md"
+        ></Input.Password>
+        <Spacer y={2} />
+        <div className="flex gap-3">
+          <Button flat auto className="bg-[#17c964]/10 flex-1" color="primary">
+            Reset
+          </Button>
+        </div>
+      </Grid.Container>
+    </div>
+  );
+}
+
+export default function LoginRegisterDialog({
+  onClose,
+  initialState,
+  children,
+}) {
+  const [state, setState] = useState(initialState || "login"); // login || register || forgotPassword || resetPassword
 
   return (
     <motion.div
       layout="size"
-      className="w-full rounded-xl bg-[#1A191E] bg-login-background bg-repeat bg-cover overflow-auto"
+      className="w-full rounded-xl bg-[#111111] bg-login-background bg-repeat bg-cover overflow-auto"
     >
-      <div className="md:w-4/5 xs:w-full bg-[#1A191E] md:float-right p-4">
+      <div className="md:w-4/5 xs:w-full bg-[#111111] md:float-right p-4">
         <Grid.Container direction="column">
           <Grid.Container
             direction="column"
@@ -172,7 +206,7 @@ export default function LoginRegisterDialog({ children }) {
             alignItems="flex-end"
             justify="flex-end"
           >
-            <Button auto>
+            <Button auto onClick={onClose}>
               <IconX />
             </Button>
           </Grid.Container>
@@ -182,6 +216,7 @@ export default function LoginRegisterDialog({ children }) {
           {state === "forgotPassword" && (
             <ForgotPasswordSection setState={setState} />
           )}
+          {state === "resetPassword" && <ResetPassword setState={setState} />}
           <Spacer y={2} />
         </Grid.Container>
       </div>
