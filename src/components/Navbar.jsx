@@ -171,12 +171,12 @@ export default function Navbar() {
             )}
           </li>
           <li className="ml-20">
-            <a
+            <Link
               className="text-white text-md font-normal leading-7  link-underline link-underline-black "
               href="/auth/login"
             >
               Login
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

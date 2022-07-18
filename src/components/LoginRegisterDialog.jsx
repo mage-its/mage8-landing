@@ -29,6 +29,7 @@ export default class LoginRegisterDialog extends Component {
   }
 
   LoginSection = ({ setState }) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const formikLogin = useFormik({
       initialValues: {
         email: "",
@@ -127,6 +128,7 @@ export default class LoginRegisterDialog extends Component {
   };
 
   RegisterSection = ({ setState }) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const formikRegister = useFormik({
       initialValues: {
         name: "",
