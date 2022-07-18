@@ -9,7 +9,7 @@ export default function index(props) {
     <>
       <div className="  flex flex-col mt-10 flex items-center justify-center ">
         {" "}
-        <h1 className=" text-center font-bold  text-xl sm:text-4xl  leading-tight">
+        <h1 className="mt-32 text-center font-bold  text-xl sm:text-4xl  leading-tight">
           {" "}
           {"About " + "" + props.judulCompe + " Competition"}
         </h1>
