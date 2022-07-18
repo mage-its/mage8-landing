@@ -202,7 +202,7 @@ export default function Navbar() {
       </div>
       {menu && (
         <div
-          className={`  overflow-hidden  bg-black lg:hidden w-full h-screen lg:bg-none fixed  top-0 p-7 px-5 lg:p-0   transition-all duration-500 ease-in  ${
+          className={`  overflow-hidden  bg-black lg:hidden w-full h-[90rem] lg:bg-none fixed  top-0 p-7 px-5 lg:p-0   transition-all duration-500 ease-in  ${
             setMenu ? "left-0 duration-100 " : "-left-[500px] duration-100"
           }`}
         >
