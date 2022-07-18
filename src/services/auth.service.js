@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://mage8-backend-dev-pgqllxt4ka-as.a.run.app/v1/auth/";
+const API_URL = process.env.BACKEND_API_URL + "v1/auth/";
 
 class AuthService {
   async login(user) {
