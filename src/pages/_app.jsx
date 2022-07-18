@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 function MyApp({ Component, pageProps }) {
   return (
     <NextThemesProvider
-      defaultTheme="system"
+      defaultTheme="dark"
       attribute="class"
       value={{
         dark: darkTheme.className,
