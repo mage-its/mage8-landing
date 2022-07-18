@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = process.env.BACKEND_API_URL + "v1/auth/";
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_API_URL + "v1/auth/";
 
 class AuthService {
   async login(user) {

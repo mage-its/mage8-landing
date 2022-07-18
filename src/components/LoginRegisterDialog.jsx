@@ -17,8 +17,8 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import authService from "@/services/auth.service";
 import Router from "next/router";
-// import { auth, provider } from "@/common/firebase";
-// import { signInWithPopup } from "firebase/auth";
+import { auth, provider } from "@/common/firebase";
+import { signInWithPopup } from "firebase/auth";
 
 export default class LoginRegisterDialog extends Component {
   constructor(props) {
@@ -111,17 +111,17 @@ export default class LoginRegisterDialog extends Component {
           borderWeight="normal"
           size="lg"
           className="border-zinc-600"
-          // onClick={() => {
-          //   signInWithPopup(auth, provider).then((result) => {
-          //     console.log(result);
-          //     authService
-          //       .googleLogin(result._tokenResponse.idToken)
-          //       .then((res) => {
-          //         localStorage.setItem("user", JSON.stringify(res));
-          //         Router.push("/dashboard");
-          //       });
-          //   });
-          // }}
+          onClick={() => {
+            signInWithPopup(auth, provider).then((result) => {
+              // console.log(result);
+              authService
+                .googleLogin(result._tokenResponse.idToken)
+                .then((res) => {
+                  localStorage.setItem("user", JSON.stringify(res));
+                  Router.push("/dashboard");
+                });
+            });
+          }}
         >
           <GoogleLogo />
           <Spacer x={0.5} />
