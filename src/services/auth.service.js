@@ -36,7 +36,7 @@ class AuthService {
   }
 
   verifyEmailByToken(token) {
-    return axios.put(`${API_URL}verify-email/?token=${token}`);
+    return axios.post(`${API_URL}verify-email/?token=${token}`);
   }
 
   requestChangePassword(email) {
