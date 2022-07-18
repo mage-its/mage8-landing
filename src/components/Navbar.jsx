@@ -7,30 +7,30 @@ import { motion } from "framer-motion";
 const Competition = [
   {
     compe: "App Dev",
-    link: "https://www.mage-its.id/appdev",
+    link: "/competition/appdev",
   },
   {
     compe: "Game Dev",
-    link: "https://www.mage-its.id/gamedev",
+    link: "/competition/gamedev",
   },
   {
     compe: "IOT Dev",
-    link: "https://www.mage-its.id/iotdev",
+    link: "/competition/iotdev",
   },
   {
     compe: "Olimpiade",
-    link: "https://www.mage-its.id/olim",
+    link: "/competition/olim",
   },
 ];
 
 const Listevent = [
   {
     event: "Workshop",
-    link: "https://www.mage-its.id/workshop",
+    link: "/workshop",
   },
   {
     event: "Webinar",
-    link: "https://www.mage-its.id/webinar",
+    link: "/webinar",
   },
 ];
 
@@ -80,20 +80,20 @@ export default function Navbar() {
       <div className="flex lg:w-9/12 w-8/12 justify-end items-center self-center mt-5 ">
         <ul className="flex-row hidden lg:flex ">
           <li className="ml-20">
-            <a
+            <Link
               className="text-white text-md font-normal leading-7  link-underline link-underline-black "
               href="https://www.mage-its.id"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li className="ml-20">
-            <a
+            <Link
               className="text-white text-md font-normal leading-7  link-underline link-underline-black "
-              href="https://www.mage-its.id/about"
+              href="/about"
             >
               About
-            </a>
+            </Link>
           </li>
           <li className="ml-20 relative ">
             <a

@@ -8,7 +8,7 @@ import { SeoIotDev } from "@/components/Seo";
 export default function competition() {
   return (
     <>
-      <SeoIotDev/>
+      <SeoIotDev />
       <Navbar />
       <Competition
         gambar={CompetitionData[2].image}
@@ -17,6 +17,7 @@ export default function competition() {
         deskripsiKategori={CompetitionData[2].kategori}
         contactPerson={CompetitionData[2].kontak}
         timeLinePercobaan={DevcomTimeline}
+        guidebook={CompetitionData[2].guidebook}
       />
       <Footer />
     </>

@@ -8,7 +8,7 @@ import { SeoOlimp } from "@/components/Seo";
 export default function competition() {
   return (
     <>
-    <SeoOlimp/>
+      <SeoOlimp />
       <Navbar />
       <Competition
         gambar={CompetitionData[3].image}
@@ -17,6 +17,7 @@ export default function competition() {
         deskripsiKategori={CompetitionData[3].kategori}
         contactPerson={CompetitionData[3].kontak}
         timeLinePercobaan={DataTimelineProxy}
+        guidebook={CompetitionData[3].guidebook}
       />
       <Footer />
     </>

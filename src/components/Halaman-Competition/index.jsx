@@ -4,13 +4,12 @@ import TitleSubbab from "@/components/Title";
 import Guidebook from "@/components/Guidebook";
 import CompetitionCarrousel from "@/components/CompetitionCarrousel";
 import { CompetitionData } from "../CompetitionData";
+import Link from "next/link";
 export default function index(props) {
   return (
     <>
-      <div className="  flex flex-col mt-10 flex items-center justify-center ">
-        {" "}
-        <h1 className=" text-center font-bold  text-xl sm:text-4xl  leading-tight">
-          {" "}
+      <div className="flex-col mt-28 flex items-center justify-center">
+        <h1 className="text-center font-bold  text-xl sm:text-4xl  leading-tight">
           {"About " + "" + props.judulCompe + " Competition"}
         </h1>
         <Image
@@ -22,19 +21,15 @@ export default function index(props) {
       </div>
 
       <div className="flex items-center justify-center">
-        <a
-          className="mr-2 sm:mr-4 lg:mr-10 mt-4     text-white     sm:text-lg sm:leading-7   font-medium  primary px-2 py-2 sm:px-2 sm:py-4 rounded-full   "
-          href="#"
-        >
-          {" "}
-          Daftar Sekarang
-        </a>
+        <div className="mr-2 sm:mr-4 lg:mr-10 mt-4 text-white sm:text-lg sm:leading-7 font-medium primary px-2 py-2 sm:px-2 sm:py-4 rounded-full   ">
+          <Link href="/dashboard">Daftar Sekarang</Link>
+        </div>
         <a
           className="mt-4  text-white  sm:text-lg sm:leading-7 font-medium primary px-1 py-2   sm:px-3 sm:py-4  rounded-full  "
-          href="#"
+          href={props.guidebook}
         >
           {" "}
-          Donwload Guidebook
+          Download Guidebook
         </a>
       </div>
       <div className="flex-col mt-20 container mx-auto px-10">
@@ -63,7 +58,7 @@ export default function index(props) {
         <TitleSubbab subbab="Contact Person" />
         {props.contactPerson}
       </div>
-      <Guidebook />
+      <Guidebook href={props.guidebook} />
     </>
   );
 }
