@@ -113,11 +113,11 @@ export default class LoginRegisterDialog extends Component {
           className="border-zinc-600"
           onClick={() => {
             signInWithPopup(auth, provider).then((result) => {
-              // console.log(result);
+              console.log(result._tokenResponse.idToken);
               authService
                 .googleLogin(result._tokenResponse.idToken)
                 .then((res) => {
-                  localStorage.setItem("user", JSON.stringify(res));
+                  localStorage.setItem("user", JSON.stringify(res.data));
                   Router.push("/dashboard");
                 });
             });
