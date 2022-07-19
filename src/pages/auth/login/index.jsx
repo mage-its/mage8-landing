@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import LoginRegisterDialog from "@/components/LoginRegisterDialog";
 import Link from "next/link";
 import Head from "next/head";
+import Seo from "@/components/Seo";
 
 function Login() {
   const router = useRouter();
@@ -16,9 +17,7 @@ function Login() {
 
   return (
     <>
-      <Head>
-        <title>Login</title>
-      </Head>
+      <Seo templateTitle="Login" />
       <div className="h-screen footer-b-background bg-cover">
         <Grid.Container
           direction="row"
