@@ -22,7 +22,7 @@ export default function About() {
         </a>
       </div>
 
-      <div className="  mt-20 h-min flex col items-center justify-center"></div>
+      <div className="  mt-20 h-min flex col items-center justify-center" />
       <div className="bg-black ">
         <div className="container px-6 py-4 mx-auto lg:flex lg:h-128 lg:py-16 ">
           <div className="flex flex-col items-center w-full lg:flex-row lg:w-4/12">
@@ -59,7 +59,7 @@ export default function About() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className=" sm:px-px px-40"
-          ></iframe>
+           />
         </div>
       </div>
     </>
