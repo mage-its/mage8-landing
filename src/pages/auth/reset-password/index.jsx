@@ -11,7 +11,7 @@ export default function VerifyEmail() {
 
   useEffect(() => {
     const { token } = router.query;
-    console.log(token);
+
     if (!token === "") {
       router.push("/");
     }

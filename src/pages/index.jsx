@@ -9,12 +9,14 @@ import Navbar from "@/components/Navbar";
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { SeoMain } from "@/components/Seo";
+// import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   return (
     <>
       <SeoMain />
       <Layout>
+        {/* <BackToTop /> */}
         <div className="h-screen flex justify-center items-center relative overflow-x-clip">
           <div className="grid gap-4 grid-row-2 md:grid-cols-2 sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl w-10/12 h-min place-items-center">
             <img src="/static/logo/mage-glow.svg" alt="Logo Mage" />
