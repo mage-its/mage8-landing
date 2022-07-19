@@ -6,7 +6,7 @@ import { CompetitionData } from "../data/CompetitionData";
 import TitleSubbab from "../components/Title";
 import { Button, Collapse, Text, Grid, Card } from "@nextui-org/react";
 import Navbar from "@/components/Navbar";
-import Layout from "@/components/Layout";
+import Layout from "@/layout/MainLayout";
 import { motion } from "framer-motion";
 import { SeoMain } from "@/components/Seo";
 // import BackToTop from "@/components/BackToTop";

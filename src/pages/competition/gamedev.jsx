@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-import Competition from "@/components/Halaman-Competition";
+import Competition from "@/layout/CompetitionPageLayout";
 import Footer from "@/components/Footer";
 import { CompetitionData } from "@/data/CompetitionData";
 import { DevcomTimeline } from "@/data/DataTimelineDevcom";
