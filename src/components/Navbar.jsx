@@ -82,7 +82,7 @@ export default function Navbar() {
           <li className="ml-20 link-underline link-underline-black">
             <Link
               className="text-white text-md font-normal leading-7   "
-              href="https://www.mage-its.id"
+              href="/"
             >
               Home
             </Link>
