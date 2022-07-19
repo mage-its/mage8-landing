@@ -147,7 +147,7 @@ export default function Home() {
                       size="xs"
                       className="bg-green-500/20 w-min"
                     >
-                      Umum
+                      Mahasiswa/Siswa
                     </Button>
                     <Button
                       flat
@@ -155,7 +155,7 @@ export default function Home() {
                       size="xs"
                       className="bg-green-500/20 w-min"
                     >
-                      Rp. 110.000,-
+                      Rp. 100.000,-
                     </Button>
                   </div>
                   <Button flat auto className="bg-green-500/20 w-min">
@@ -180,7 +180,7 @@ export default function Home() {
                       size="xs"
                       className="bg-green-500/20 w-min"
                     >
-                      Umum
+                      Mahasiswa/Siswa
                     </Button>
                     <Button
                       flat
@@ -188,7 +188,7 @@ export default function Home() {
                       size="xs"
                       className="bg-green-500/20 w-min"
                     >
-                      Rp. 110.000,-
+                      Rp. 100.000,-
                     </Button>
                   </div>
                   <Button
@@ -217,7 +217,7 @@ export default function Home() {
                       size="xs"
                       className="bg-green-500/20 w-min"
                     >
-                      Umum
+                      Siswa
                     </Button>
                     <Button
                       flat
@@ -225,7 +225,7 @@ export default function Home() {
                       size="xs"
                       className="bg-green-500/20 w-min"
                     >
-                      Rp. 110.000,-
+                      Rp. 60.000,-
                     </Button>
                   </div>
                   <Button
