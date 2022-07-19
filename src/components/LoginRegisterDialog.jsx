@@ -113,7 +113,6 @@ export default class LoginRegisterDialog extends Component {
           className="border-zinc-600"
           onClick={() => {
             signInWithPopup(auth, provider).then((result) => {
-              
               authService
                 .googleLogin(result._tokenResponse.idToken)
                 .then((res) => {
