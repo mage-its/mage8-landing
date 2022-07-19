@@ -8,21 +8,21 @@ export const SeoMain = () => {
         additionalLinkTags={[
           {
             rel: "icon",
-            href: "img/logo-mage 8.svg"
+            href: "img/logo-mage 8.svg",
           },
           {
             rel: "stylesheet",
-            href: "https://cdn.tailwindcss.com"
+            href: "https://cdn.tailwindcss.com",
           },
           {
             rel: "preload",
-            as: "style"
+            as: "style",
           },
           {
             rel: "preconnect",
             href: "https://fonts.gstatic.com",
-            crossOrigin: "anonymous"
-          }
+            crossOrigin: "anonymous",
+          },
         ]}
         openGraph={{
           url: "",
@@ -34,24 +34,24 @@ export const SeoMain = () => {
               width: 800,
               height: 600,
               alt: "Og Image Alt",
-              type: "image/jpeg"
+              type: "image/jpeg",
             },
             {
               url: "",
               width: 900,
               height: 800,
               alt: "Og Image Alt Second",
-              type: "image/jpeg"
+              type: "image/jpeg",
             },
             { url: "" },
-            { url: "" }
+            { url: "" },
           ],
-          site_name: "SiteName"
+          site_name: "SiteName",
         }}
         twitter={{
           handle: "@handle",
           site: "@site",
-          cardType: "summary_large_image"
+          cardType: "summary_large_image",
         }}
       />
     </div>
@@ -67,21 +67,21 @@ export const SeoAbout = () => {
         additionalLinkTags={[
           {
             rel: "icon",
-            href: "img/logo-mage 8.svg"
+            href: "img/logo-mage 8.svg",
           },
           {
             rel: "stylesheet",
-            href: "https://cdn.tailwindcss.com"
+            href: "https://cdn.tailwindcss.com",
           },
           {
             rel: "preload",
-            as: "style"
+            as: "style",
           },
           {
             rel: "preconnect",
             href: "https://fonts.gstatic.com",
-            crossOrigin: "anonymous"
-          }
+            crossOrigin: "anonymous",
+          },
         ]}
         openGraph={{
           url: "",
@@ -93,24 +93,24 @@ export const SeoAbout = () => {
               width: 800,
               height: 600,
               alt: "Og Image Alt",
-              type: "image/jpeg"
+              type: "image/jpeg",
             },
             {
               url: "",
               width: 900,
               height: 800,
               alt: "Og Image Alt Second",
-              type: "image/jpeg"
+              type: "image/jpeg",
             },
             { url: "" },
-            { url: "" }
+            { url: "" },
           ],
-          site_name: "SiteName"
+          site_name: "SiteName",
         }}
         twitter={{
           handle: "@handle",
           site: "@site",
-          cardType: "summary_large_image"
+          cardType: "summary_large_image",
         }}
       />
     </div>
@@ -126,21 +126,21 @@ export const SeoAppDev = () => {
         additionalLinkTags={[
           {
             rel: "icon",
-            href: "img/logo-mage 8.svg"
+            href: "img/logo-mage 8.svg",
           },
           {
             rel: "stylesheet",
-            href: "https://cdn.tailwindcss.com"
+            href: "https://cdn.tailwindcss.com",
           },
           {
             rel: "preload",
-            as: "style"
+            as: "style",
           },
           {
             rel: "preconnect",
             href: "https://fonts.gstatic.com",
-            crossOrigin: "anonymous"
-          }
+            crossOrigin: "anonymous",
+          },
         ]}
         openGraph={{
           url: "",
@@ -152,24 +152,24 @@ export const SeoAppDev = () => {
               width: 800,
               height: 600,
               alt: "Og Image Alt",
-              type: "image/jpeg"
+              type: "image/jpeg",
             },
             {
               url: "",
               width: 900,
               height: 800,
               alt: "Og Image Alt Second",
-              type: "image/jpeg"
+              type: "image/jpeg",
             },
             { url: "" },
-            { url: "" }
+            { url: "" },
           ],
-          site_name: "SiteName"
+          site_name: "SiteName",
         }}
         twitter={{
           handle: "@handle",
           site: "@site",
-          cardType: "summary_large_image"
+          cardType: "summary_large_image",
         }}
       />
     </div>
@@ -185,21 +185,21 @@ export const SeoGameDev = () => {
         additionalLinkTags={[
           {
             rel: "icon",
-            href: "img/logo-mage 8.svg"
+            href: "img/logo-mage 8.svg",
           },
           {
             rel: "stylesheet",
-            href: "https://cdn.tailwindcss.com"
+            href: "https://cdn.tailwindcss.com",
           },
           {
             rel: "preload",
-            as: "style"
+            as: "style",
           },
           {
             rel: "preconnect",
             href: "https://fonts.gstatic.com",
-            crossOrigin: "anonymous"
-          }
+            crossOrigin: "anonymous",
+          },
         ]}
         openGraph={{
           url: "",
@@ -211,24 +211,24 @@ export const SeoGameDev = () => {
               width: 800,
               height: 600,
               alt: "Og Image Alt",
-              type: "image/jpeg"
+              type: "image/jpeg",
             },
             {
               url: "",
               width: 900,
               height: 800,
               alt: "Og Image Alt Second",
-              type: "image/jpeg"
+              type: "image/jpeg",
             },
             { url: "" },
-            { url: "" }
+            { url: "" },
           ],
-          site_name: "SiteName"
+          site_name: "SiteName",
         }}
         twitter={{
           handle: "@handle",
           site: "@site",
-          cardType: "summary_large_image"
+          cardType: "summary_large_image",
         }}
       />
     </div>
@@ -244,21 +244,21 @@ export const SeoIotDev = () => {
         additionalLinkTags={[
           {
             rel: "icon",
-            href: "img/logo-mage 8.svg"
+            href: "img/logo-mage 8.svg",
           },
           {
             rel: "stylesheet",
-            href: "https://cdn.tailwindcss.com"
+            href: "https://cdn.tailwindcss.com",
           },
           {
             rel: "preload",
-            as: "style"
+            as: "style",
           },
           {
             rel: "preconnect",
             href: "https://fonts.gstatic.com",
-            crossOrigin: "anonymous"
-          }
+            crossOrigin: "anonymous",
+          },
         ]}
         openGraph={{
           url: "",
@@ -270,24 +270,24 @@ export const SeoIotDev = () => {
               width: 800,
               height: 600,
               alt: "Og Image Alt",
-              type: "image/jpeg"
+              type: "image/jpeg",
             },
             {
               url: "",
               width: 900,
               height: 800,
               alt: "Og Image Alt Second",
-              type: "image/jpeg"
+              type: "image/jpeg",
             },
             { url: "" },
-            { url: "" }
+            { url: "" },
           ],
-          site_name: "SiteName"
+          site_name: "SiteName",
         }}
         twitter={{
           handle: "@handle",
           site: "@site",
-          cardType: "summary_large_image"
+          cardType: "summary_large_image",
         }}
       />
     </div>
@@ -303,21 +303,21 @@ export const SeoOlimp = () => {
         additionalLinkTags={[
           {
             rel: "icon",
-            href: "img/logo-mage 8.svg"
+            href: "img/logo-mage 8.svg",
           },
           {
             rel: "stylesheet",
-            href: "https://cdn.tailwindcss.com"
+            href: "https://cdn.tailwindcss.com",
           },
           {
             rel: "preload",
-            as: "style"
+            as: "style",
           },
           {
             rel: "preconnect",
             href: "https://fonts.gstatic.com",
-            crossOrigin: "anonymous"
-          }
+            crossOrigin: "anonymous",
+          },
         ]}
         openGraph={{
           url: "",
@@ -329,24 +329,24 @@ export const SeoOlimp = () => {
               width: 800,
               height: 600,
               alt: "Og Image Alt",
-              type: "image/jpeg"
+              type: "image/jpeg",
             },
             {
               url: "",
               width: 900,
               height: 800,
               alt: "Og Image Alt Second",
-              type: "image/jpeg"
+              type: "image/jpeg",
             },
             { url: "" },
-            { url: "" }
+            { url: "" },
           ],
-          site_name: "SiteName"
+          site_name: "SiteName",
         }}
         twitter={{
           handle: "@handle",
           site: "@site",
-          cardType: "summary_large_image"
+          cardType: "summary_large_image",
         }}
       />
     </div>
