@@ -24,7 +24,7 @@ export default function Home() {
               <img src="/static/logo/mage-text.svg" alt="Text logo" />
               <Text
                 css={{
-                  textGradient: "45deg, #00D8FF -20%, #6FDAE4 50%"
+                  textGradient: "45deg, #00D8FF -20%, #6FDAE4 50%",
                 }}
                 weight="bold"
                 className="animate-text md:text-lg lg:text-xl"
@@ -48,7 +48,7 @@ export default function Home() {
             src="/static/background/main-gradient-rectangle.svg"
             className="w-11/12 h-[calc(100vh+3rem)] absolute top-28 hidden lg:block"
             style={{
-              objectFit: "fill"
+              objectFit: "fill",
             }}
             alt="gradient-border"
           />
@@ -70,7 +70,7 @@ export default function Home() {
           <div className="absolute bottom-28 max-w-[1213px] max-h-[210px] h-full w-10/12">
             <Text
               css={{
-                textGradient: "45deg, #546FDD -20%, #6FCC93 50%"
+                textGradient: "45deg, #546FDD -20%, #6FCC93 50%",
               }}
               span
               className="absolute text-9xl font-bold top-5 right-0 animate-text"
@@ -88,7 +88,7 @@ export default function Home() {
           <div className="relative h-min w-min start">
             <Text
               css={{
-                textGradient: "45deg, #546FDD -20%, #6FCC93 50%"
+                textGradient: "45deg, #546FDD -20%, #6FCC93 50%",
               }}
               span
               className="text-8xl font-bold animate-text"
