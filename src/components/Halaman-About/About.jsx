@@ -59,7 +59,7 @@ export default function About() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className=" sm:px-px px-40"
-           />
+          />
         </div>
       </div>
     </>
