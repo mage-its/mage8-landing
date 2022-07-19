@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { CompetitionData } from "@/components/CompetitionData";
 import { DataTimelineProxy } from "@/components/DataTimelineProxy";
 import { SeoOlimp } from "@/components/Seo";
+import { dataProxy } from "@/components/DataFAQ";
 export default function competition() {
   return (
     <>
@@ -18,6 +19,7 @@ export default function competition() {
         contactPerson={CompetitionData[3].kontak}
         timeLinePercobaan={DataTimelineProxy}
         guidebook={CompetitionData[3].guidebook}
+        faq={dataProxy}
       />
       <Footer />
     </>

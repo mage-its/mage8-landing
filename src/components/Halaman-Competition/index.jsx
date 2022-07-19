@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import TitleSubbab from "@/components/Title";
 import Guidebook from "@/components/Guidebook";
+import { Collapse, Text } from "@nextui-org/react";
 import CompetitionCarrousel from "@/components/CompetitionCarrousel";
 import { CompetitionData } from "../CompetitionData";
 import Link from "next/link";
@@ -52,6 +53,18 @@ export default function index(props) {
             );
           })}
         </h1>
+      </div>
+      <div className="flex-col mt-20 container mx-auto px-10">
+        <TitleSubbab subbab="FAQ" />
+        <Collapse.Group shadow className="mt-8">
+          {props.faq.map((item, index) => {
+            return (
+              <Collapse key={item[0]} title={item.pertanyaan}>
+                <Text>{item.jawaban}</Text>
+              </Collapse>
+            );
+          })}
+        </Collapse.Group>
       </div>
       <div className="flex-col mt-20 container mx-auto px-10">
         <h1 className="text-2xl"></h1>

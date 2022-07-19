@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { CompetitionData } from "@/components/CompetitionData";
 import { DevcomTimeline } from "@/components/DataTimelineDevcom";
 import { SeoAppDev } from "@/components/Seo";
+import { dataAppdev } from "@/components/DataFAQ";
 export default function competition() {
   return (
     <>
@@ -18,6 +19,7 @@ export default function competition() {
         contactPerson={CompetitionData[0].kontak}
         timeLinePercobaan={DevcomTimeline}
         guidebook={CompetitionData[0].guidebook}
+        faq={dataAppdev}
       />
       <Footer />
     </>
