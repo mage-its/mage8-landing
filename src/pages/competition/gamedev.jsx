@@ -3,9 +3,9 @@ import Navbar from "@/components/Navbar";
 import Competition from "@/components/Halaman-Competition";
 import Footer from "@/components/Footer";
 import { CompetitionData } from "@/data/CompetitionData";
-import { DevcomTimeline } from "@/components/DataTimelineDevcom";
+import { DevcomTimeline } from "@/data/DataTimelineDevcom";
 import { SeoGameDev } from "@/components/Seo";
-import { dataGameDev } from "@/components/DataFAQ";
+import { dataGameDev } from "@/data/DataFAQ";
 
 export default function competition() {
   return (
