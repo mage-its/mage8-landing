@@ -230,13 +230,10 @@ export default function Navbar() {
             <li>
               <div className="flex ">
                 <div className="link-underline link-underline-black">
-                  <a
-                    href="https://www.mage-its.id"
-                    className="text-2xl font-semibold leading-7 "
-                  >
+                  <Link href="/">
                     {" "}
-                    HOME
-                  </a>
+                    <a className="text-2xl font-semibold leading-7 "> HOME</a>
+                  </Link>
                 </div>
               </div>
             </li>
