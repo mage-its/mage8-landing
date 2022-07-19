@@ -1,6 +1,6 @@
 import { Grid } from "@nextui-org/react";
 import React, { useState } from "react";
-import { CompetitionData } from "@/components/CompetitionData";
+import { CompetitionData } from "@/data/CompetitionData";
 
 export default function CompetitionCarrousel(compe) {
   const [current, setCurrent] = useState(0);

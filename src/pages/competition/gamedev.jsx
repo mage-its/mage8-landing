@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Competition from "@/components/Halaman-Competition";
 import Footer from "@/components/Footer";
-import { CompetitionData } from "@/components/CompetitionData";
+import { CompetitionData } from "@/data/CompetitionData";
 import { DevcomTimeline } from "@/components/DataTimelineDevcom";
 import { SeoGameDev } from "@/components/Seo";
 import { dataGameDev } from "@/components/DataFAQ";

@@ -2,10 +2,10 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Competition from "@/components/Halaman-Competition";
 import Footer from "@/components/Footer";
-import { CompetitionData } from "@/components/CompetitionData";
-import { DevcomTimeline } from "@/components/DataTimelineDevcom";
+import { CompetitionData } from "@/data/CompetitionData";
+import { DevcomTimeline } from "@/data/DataTimelineDevcom";
 import { SeoIotDev } from "@/components/Seo";
-import { dataIoTDev } from "@/components/DataFAQ";
+import { dataIoTDev } from "@/data/DataFAQ";
 export default function competition() {
   return (
     <>
