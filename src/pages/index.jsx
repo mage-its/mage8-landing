@@ -9,12 +9,14 @@ import Navbar from "@/components/Navbar";
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { SeoMain } from "@/components/Seo";
+// import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   return (
     <>
       <SeoMain />
       <Layout>
+        {/* <BackToTop /> */}
         <div className="h-screen flex justify-center items-center relative overflow-x-clip">
           <div className="grid gap-4 grid-row-2 md:grid-cols-2 sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl w-10/12 h-min place-items-center">
             <img src="/static/logo/mage-glow.svg" alt="Logo Mage" />
@@ -22,7 +24,7 @@ export default function Home() {
               <img src="/static/logo/mage-text.svg" alt="Text logo" />
               <Text
                 css={{
-                  textGradient: "45deg, #00D8FF -20%, #6FDAE4 50%",
+                  textGradient: "45deg, #00D8FF -20%, #6FDAE4 50%"
                 }}
                 weight="bold"
                 className="animate-text md:text-lg lg:text-xl"
@@ -46,7 +48,7 @@ export default function Home() {
             src="/static/background/main-gradient-rectangle.svg"
             className="w-11/12 h-[calc(100vh+3rem)] absolute top-28 hidden lg:block"
             style={{
-              objectFit: "fill",
+              objectFit: "fill"
             }}
             alt="gradient-border"
           />
@@ -68,7 +70,7 @@ export default function Home() {
           <div className="absolute bottom-28 max-w-[1213px] max-h-[210px] h-full w-10/12">
             <Text
               css={{
-                textGradient: "45deg, #546FDD -20%, #6FCC93 50%",
+                textGradient: "45deg, #546FDD -20%, #6FCC93 50%"
               }}
               span
               className="absolute text-9xl font-bold top-5 right-0 animate-text"
@@ -86,7 +88,7 @@ export default function Home() {
           <div className="relative h-min w-min start">
             <Text
               css={{
-                textGradient: "45deg, #546FDD -20%, #6FCC93 50%",
+                textGradient: "45deg, #546FDD -20%, #6FCC93 50%"
               }}
               span
               className="text-8xl font-bold animate-text"

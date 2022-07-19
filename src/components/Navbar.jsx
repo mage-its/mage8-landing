@@ -243,13 +243,13 @@ export default function Navbar() {
             <li className="mt-4">
               <div className="flex mt-4">
                 <div className="link-underline link-underline-black">
-                  <a
-                    href="https://www.mage-its.id/about"
+                  <Link
+                    href="/about"
                     className="text-2xl font-semibold leading-7 "
                   >
                     {" "}
                     ABOUT
-                  </a>
+                  </Link>
                 </div>
               </div>
             </li>
@@ -325,12 +325,12 @@ export default function Navbar() {
             <li>
               <div className="flex mt-4 ">
                 <div className="flex mt-4 link-underline link-underline-black">
-                  <a
-                    href="https://www.mage-its.id/auth/login"
+                  <Link
+                    href="/auth/login"
                     className="text-2xl font-semibold leading-7 "
                   >
                     LOGIN
-                  </a>
+                  </Link>
                 </div>
               </div>
             </li>
