@@ -243,12 +243,8 @@ export default function Navbar() {
             <li className="mt-4">
               <div className="flex mt-4">
                 <div className="link-underline link-underline-black">
-                  <Link
-                    href="/about"
-                    className="text-2xl font-semibold leading-7 "
-                  >
-                    {" "}
-                    ABOUT
+                  <Link href="/about">
+                    <a className="text-2xl font-semibold leading-7 "> ABOUT</a>
                   </Link>
                 </div>
               </div>
@@ -325,11 +321,8 @@ export default function Navbar() {
             <li>
               <div className="flex mt-4 ">
                 <div className="flex mt-4 link-underline link-underline-black">
-                  <Link
-                    href="/auth/login"
-                    className="text-2xl font-semibold leading-7 "
-                  >
-                    LOGIN
+                  <Link href="/auth/login">
+                    <a className="text-2xl font-semibold leading-7 ">LOGIN</a>
                   </Link>
                 </div>
               </div>
