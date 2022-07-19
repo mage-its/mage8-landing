@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import LoginRegisterDialog from "@/components/LoginRegisterDialog";
 import Navbar from "@/components/Navbar";
+import Seo from "@/components/Seo";
 import authService from "@/services/auth.service";
 import { Button, Grid, Spacer, Text } from "@nextui-org/react";
 import { useRouter } from "next/router";
@@ -24,20 +25,23 @@ export default function VerifyEmail() {
   };
 
   return (
-    <div className="h-screen footer-b-background bg-cover">
-      <Grid.Container
-        direction="row"
-        className="h-screen w-screen"
-        justify="center"
-        alignContent="center"
-      >
-        <div className="w-full m-3 max-w-md md:max-w-lg lg:max-w-xl">
-          <LoginRegisterDialog
-            initialState={"resetPassword"}
-            onClose={handleClose}
-          />
-        </div>
-      </Grid.Container>
-    </div>
+    <>
+      <Seo templateTitle="Reset Password" />
+      <div className="h-screen footer-b-background bg-cover">
+        <Grid.Container
+          direction="row"
+          className="h-screen w-screen"
+          justify="center"
+          alignContent="center"
+        >
+          <div className="w-full m-3 max-w-md md:max-w-lg lg:max-w-xl">
+            <LoginRegisterDialog
+              initialState={"resetPassword"}
+              onClose={handleClose}
+            />
+          </div>
+        </Grid.Container>
+      </div>
+    </>
   );
 }

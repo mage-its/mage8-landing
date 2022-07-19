@@ -4,12 +4,12 @@ import Competition from "@/layout/CompetitionPageLayout";
 import Footer from "@/components/Footer";
 import { CompetitionData } from "@/data/CompetitionData";
 import { DevcomTimeline } from "@/data/DataTimelineDevcom";
-import { SeoIotDev } from "@/components/Seo";
+import Seo from "@/components/Seo";
 import { dataIoTDev } from "@/data/DataFAQ";
 export default function competition() {
   return (
     <>
-      <SeoIotDev />
+      <Seo templateTitle="IoT Development" />
       <Navbar />
       <Competition
         gambar={CompetitionData[2].image}

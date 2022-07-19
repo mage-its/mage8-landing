@@ -1,354 +1,137 @@
-import { NextSeo } from "next-seo";
-export const SeoMain = () => {
-  return (
-    <div>
-      <NextSeo
-        title="MAGE 8 | Multimedia And Game Event 8"
-        description="MAGE (Multimedia and Game Event) adalah Wadah bagi generasi muda dalam berkreasi, berekspresi, dan berkompetisi untuk menuangkan inovasi sekaligus menyelesaikan permasalahan dengan memanfaatkan berbagai macam teknologi melalui serangkaian kegiatan seperti Development Competition (Apps, IoT, Games), Olimpiade, Workshop, dan Webinar."
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "img/logo-mage 8.svg",
-          },
-          {
-            rel: "stylesheet",
-            href: "https://cdn.tailwindcss.com",
-          },
-          {
-            rel: "preload",
-            as: "style",
-          },
-          {
-            rel: "preconnect",
-            href: "https://fonts.gstatic.com",
-            crossOrigin: "anonymous",
-          },
-        ]}
-        openGraph={{
-          url: "",
-          title: "",
-          description: "",
-          images: [
-            {
-              url: "",
-              width: 800,
-              height: 600,
-              alt: "Og Image Alt",
-              type: "image/jpeg",
-            },
-            {
-              url: "",
-              width: 900,
-              height: 800,
-              alt: "Og Image Alt Second",
-              type: "image/jpeg",
-            },
-            { url: "" },
-            { url: "" },
-          ],
-          site_name: "SiteName",
-        }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
-      />
-    </div>
-  );
+import Head from "next/head";
+import { useRouter } from "next/router";
+
+const defaultMeta = {
+  title: "Multimedia and Game Event 8",
+  siteName: "Multimedia and Game Event 8",
+  description:
+    "MAGE (Multimedia and Game Event) adalah Wadah bagi generasi muda dalam berkreasi, berekspresi, dan berkompetisi untuk menuangkan inovasi sekaligus menyelesaikan permasalahan dengan memanfaatkan berbagai macam teknologi melalui serangkaian kegiatan seperti Development Competition (Apps, IoT, Games), Olimpiade, Workshop, dan Webinar.",
+  url: "https://mage-its.id",
+  type: "website",
+  robots: "follow, index",
+  image: "/og.png",
 };
 
-export const SeoAbout = () => {
-  return (
-    <div>
-      <NextSeo
-        title="MAGE 8 | About"
-        description="MAGE (Multimedia and Game Event) adalah Wadah bagi generasi muda dalam berkreasi, berekspresi, dan berkompetisi untuk menuangkan inovasi sekaligus menyelesaikan permasalahan dengan memanfaatkan berbagai macam teknologi melalui serangkaian kegiatan seperti Development Competition (Apps, IoT, Games), Olimpiade, Workshop, dan Webinar."
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "img/logo-mage 8.svg",
-          },
-          {
-            rel: "stylesheet",
-            href: "https://cdn.tailwindcss.com",
-          },
-          {
-            rel: "preload",
-            as: "style",
-          },
-          {
-            rel: "preconnect",
-            href: "https://fonts.gstatic.com",
-            crossOrigin: "anonymous",
-          },
-        ]}
-        openGraph={{
-          url: "",
-          title: "",
-          description: "",
-          images: [
-            {
-              url: "",
-              width: 800,
-              height: 600,
-              alt: "Og Image Alt",
-              type: "image/jpeg",
-            },
-            {
-              url: "",
-              width: 900,
-              height: 800,
-              alt: "Og Image Alt Second",
-              type: "image/jpeg",
-            },
-            { url: "" },
-            { url: "" },
-          ],
-          site_name: "SiteName",
-        }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
-      />
-    </div>
-  );
-};
+export default function Seo(props) {
+  const router = useRouter();
+  const meta = {
+    ...defaultMeta,
+    ...props,
+  };
+  meta["title"] = props.templateTitle
+    ? `${props.templateTitle} | ${meta.siteName}`
+    : meta.title;
 
-export const SeoAppDev = () => {
   return (
-    <div>
-      <NextSeo
-        title="MAGE 8 | Application Development"
-        description="Application Development adalah lomba pengembangan aplikasi untuk siswa SMA/SMK/Sederajat dan mahasiswa dalam mengembangkan ide kreatif untuk menyelesaikan masalah di Indonesia dalam bentuk aplikasi mobile, web dan desktop"
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "img/logo-mage 8.svg",
-          },
-          {
-            rel: "stylesheet",
-            href: "https://cdn.tailwindcss.com",
-          },
-          {
-            rel: "preload",
-            as: "style",
-          },
-          {
-            rel: "preconnect",
-            href: "https://fonts.gstatic.com",
-            crossOrigin: "anonymous",
-          },
-        ]}
-        openGraph={{
-          url: "",
-          title: "",
-          description: "",
-          images: [
-            {
-              url: "",
-              width: 800,
-              height: 600,
-              alt: "Og Image Alt",
-              type: "image/jpeg",
-            },
-            {
-              url: "",
-              width: 900,
-              height: 800,
-              alt: "Og Image Alt Second",
-              type: "image/jpeg",
-            },
-            { url: "" },
-            { url: "" },
-          ],
-          site_name: "SiteName",
-        }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
-      />
-    </div>
-  );
-};
+    <Head>
+      <title>{meta.title}</title>
+      <meta name="robots" content={meta.robots} />
+      <meta content={meta.description} name="description" />
+      <meta property="og:url" content={`${meta.url}${router.asPath}`} />
+      <link rel="canonical" href={`${meta.url}${router.asPath}`} />
+      <meta property="og:type" content={meta.type} />
+      <meta property="og:site_name" content={meta.siteName} />
+      <meta property="og:description" content={meta.description} />
+      <meta property="og:title" content={meta.title} />
+      <meta name="image" property="og:image" content={meta.image} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content={meta.url} />
+      <meta name="twitter:title" content={meta.title} />
+      <meta name="twitter:description" content={meta.description} />
+      <meta name="twitter:image" content={meta.image} />
 
-export const SeoGameDev = () => {
-  return (
-    <div>
-      <NextSeo
-        title="MAGE 8 | Game Development"
-        description="Game Development Competition merupakan sebuah ajang kompetisi pembuatan video game yang diselenggarakan oleh Teknik Komputer ITS. Game Development Competition ditujukan untuk siswa SMA/SMK/Sederajat dan mahasiswa dengan tujuan untuk mengembangkan ide dan inovasi anak-anak muda dalam bentuk karya game digital."
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "img/logo-mage 8.svg",
-          },
-          {
-            rel: "stylesheet",
-            href: "https://cdn.tailwindcss.com",
-          },
-          {
-            rel: "preload",
-            as: "style",
-          },
-          {
-            rel: "preconnect",
-            href: "https://fonts.gstatic.com",
-            crossOrigin: "anonymous",
-          },
-        ]}
-        openGraph={{
-          url: "",
-          title: "",
-          description: "",
-          images: [
-            {
-              url: "",
-              width: 800,
-              height: 600,
-              alt: "Og Image Alt",
-              type: "image/jpeg",
-            },
-            {
-              url: "",
-              width: 900,
-              height: 800,
-              alt: "Og Image Alt Second",
-              type: "image/jpeg",
-            },
-            { url: "" },
-            { url: "" },
-          ],
-          site_name: "SiteName",
-        }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
+      <link
+        rel="apple-touch-icon-precomposed"
+        sizes="57x57"
+        href="/favicon/apple-touch-icon-57x57.png"
       />
-    </div>
-  );
-};
-
-export const SeoIotDev = () => {
-  return (
-    <div>
-      <NextSeo
-        title="MAGE 8 | Internet of Things Development"
-        description="Internet Of Things Development Competition adalah lomba pengembangan teknologi berupa aplikasi (software) yang terintegrasi dengan alat (hardware) melalui jaringan internet dan sejenisnya yang dapat diikuti oleh masyarakat umum. Internet Of Things Development Competition bertujuan untuk mengembangkan ide kreatif yang dapat menyelesaikan masalah dengan hasil keluaran (output) berupa software dengan platform mobile disertai hardware-nya."
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "img/logo-mage 8.svg",
-          },
-          {
-            rel: "stylesheet",
-            href: "https://cdn.tailwindcss.com",
-          },
-          {
-            rel: "preload",
-            as: "style",
-          },
-          {
-            rel: "preconnect",
-            href: "https://fonts.gstatic.com",
-            crossOrigin: "anonymous",
-          },
-        ]}
-        openGraph={{
-          url: "",
-          title: "",
-          description: "",
-          images: [
-            {
-              url: "",
-              width: 800,
-              height: 600,
-              alt: "Og Image Alt",
-              type: "image/jpeg",
-            },
-            {
-              url: "",
-              width: 900,
-              height: 800,
-              alt: "Og Image Alt Second",
-              type: "image/jpeg",
-            },
-            { url: "" },
-            { url: "" },
-          ],
-          site_name: "SiteName",
-        }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
+      <link
+        rel="apple-touch-icon-precomposed"
+        sizes="114x114"
+        href="/favicon/apple-touch-icon-114x114.png"
       />
-    </div>
-  );
-};
-
-export const SeoOlimp = () => {
-  return (
-    <div>
-      <NextSeo
-        title="MAGE 8 | PROXY"
-        description="PROXY (Programming and Computer Competition x Computer Engineering ITS) merupakan sebuah ajang olimpiade yang diselenggarakan oleh Teknik Komputer ITS. PROXY bertujuan untuk menguji kemampuan siswa/i Indonesia dalam menyelesaikan soal-soal terkait logika dan pemrograman"
-        additionalLinkTags={[
-          {
-            rel: "icon",
-            href: "img/logo-mage 8.svg",
-          },
-          {
-            rel: "stylesheet",
-            href: "https://cdn.tailwindcss.com",
-          },
-          {
-            rel: "preload",
-            as: "style",
-          },
-          {
-            rel: "preconnect",
-            href: "https://fonts.gstatic.com",
-            crossOrigin: "anonymous",
-          },
-        ]}
-        openGraph={{
-          url: "",
-          title: "",
-          description: "",
-          images: [
-            {
-              url: "",
-              width: 800,
-              height: 600,
-              alt: "Og Image Alt",
-              type: "image/jpeg",
-            },
-            {
-              url: "",
-              width: 900,
-              height: 800,
-              alt: "Og Image Alt Second",
-              type: "image/jpeg",
-            },
-            { url: "" },
-            { url: "" },
-          ],
-          site_name: "SiteName",
-        }}
-        twitter={{
-          handle: "@handle",
-          site: "@site",
-          cardType: "summary_large_image",
-        }}
+      <link
+        rel="apple-touch-icon-precomposed"
+        sizes="72x72"
+        href="/favicon/apple-touch-icon-72x72.png"
       />
-    </div>
+      <link
+        rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/favicon/apple-touch-icon-144x144.png"
+      />
+      <link
+        rel="apple-touch-icon-precomposed"
+        sizes="60x60"
+        href="/favicon/apple-touch-icon-60x60.png"
+      />
+      <link
+        rel="apple-touch-icon-precomposed"
+        sizes="120x120"
+        href="/favicon/apple-touch-icon-120x120.png"
+      />
+      <link
+        rel="apple-touch-icon-precomposed"
+        sizes="76x76"
+        href="/favicon/apple-touch-icon-76x76.png"
+      />
+      <link
+        rel="apple-touch-icon-precomposed"
+        sizes="152x152"
+        href="/favicon/apple-touch-icon-152x152.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        href="/favicon/favicon-196x196.png"
+        sizes="196x196"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        href="/favicon/favicon-96x96.png"
+        sizes="96x96"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        href="/favicon/favicon-32x32.png"
+        sizes="32x32"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        href="/favicon/favicon-16x16.png"
+        sizes="16x16"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        href="/favicon/favicon-128.png"
+        sizes="128x128"
+      />
+      <meta name="msapplication-TileColor" content="#FFFFFF" />
+      <meta
+        name="msapplication-TileImage"
+        content="/favicon/mstile-144x144.png"
+      />
+      <meta
+        name="msapplication-square70x70logo"
+        content="/favicon/mstile-70x70.png"
+      />
+      <meta
+        name="msapplication-square150x150logo"
+        content="/favicon/mstile-150x150.png"
+      />
+      <meta
+        name="msapplication-wide310x150logo"
+        content="/favicon/mstile-310x150.png"
+      />
+      <meta
+        name="msapplication-square310x310logo"
+        content="/favicon/mstile-310x310.png"
+      />
+      <meta name="theme-color" content="#ffffff" />
+    </Head>
   );
-};
+}

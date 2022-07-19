@@ -4,12 +4,12 @@ import Competition from "@/layout/CompetitionPageLayout";
 import Footer from "@/components/Footer";
 import { CompetitionData } from "@/data/CompetitionData";
 import { DataTimelineProxy } from "@/data/DataTimelineProxy";
-import { SeoOlimp } from "@/components/Seo";
+import Seo from "@/components/Seo";
 import { dataProxy } from "@/data/DataFAQ";
 export default function competition() {
   return (
     <>
-      <SeoOlimp />
+      <Seo templateTitle="Olimpiade" />
       <Navbar />
       <Competition
         gambar={CompetitionData[3].image}

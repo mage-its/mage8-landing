@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { SeoAbout } from "@/components/Seo";
+import Seo from "@/components/Seo";
 import Image from "next/image";
 export default function about() {
   return (
     <>
-      <SeoAbout />
+      <Seo templateTitle="About" />
       <Navbar />
       <div className="flex flex-col items-center justify-center">
         <Image width={200} height={200} alt="logo-mage" src="/Logo-Mage8.svg" />

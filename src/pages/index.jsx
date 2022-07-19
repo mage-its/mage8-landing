@@ -8,13 +8,13 @@ import { Button, Collapse, Text, Grid, Card } from "@nextui-org/react";
 import Navbar from "@/components/Navbar";
 import Layout from "@/layout/MainLayout";
 import { motion } from "framer-motion";
-import { SeoMain } from "@/components/Seo";
+import Seo from "@/components/Seo";
 // import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   return (
     <>
-      <SeoMain />
+      <Seo />
       <Layout>
         {/* <BackToTop /> */}
         <div className="h-screen flex justify-center items-center relative overflow-x-clip">
