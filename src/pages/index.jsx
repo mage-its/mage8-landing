@@ -65,7 +65,7 @@ export default function Home() {
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            ></iframe>
+            />
           </motion.div>
           <div className="absolute bottom-28 max-w-[1213px] max-h-[210px] h-full w-10/12">
             <Text

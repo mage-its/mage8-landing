@@ -59,7 +59,7 @@ export default class LoginRegisterDialog extends Component {
           type="email"
           name="email"
           label="Email"
-        ></Input>
+        />
         <Spacer y={1} />
 
         <Input.Password
@@ -70,7 +70,7 @@ export default class LoginRegisterDialog extends Component {
           type="password"
           name="password"
           label="Password"
-        ></Input.Password>
+        />
         <Text
           onClick={() => this.setState({ section: "forgotPassword" })}
           size={"0.8rem"}
@@ -171,7 +171,7 @@ export default class LoginRegisterDialog extends Component {
           type="text"
           name="name"
           label="Nama"
-        ></Input>
+        />
         <Spacer y={1} />
         <Input
           css={{ $$inputColor: "#272727" }}
@@ -181,7 +181,7 @@ export default class LoginRegisterDialog extends Component {
           type="email"
           name="email"
           label="Email"
-        ></Input>
+        />
         <Spacer y={1} />
         <Input.Password
           css={{ $$inputColor: "#272727" }}
@@ -191,7 +191,7 @@ export default class LoginRegisterDialog extends Component {
           type="password"
           name="password"
           label="Password"
-        ></Input.Password>
+        />
         <Spacer y={1} />
         <Input.Password
           css={{ $$inputColor: "#272727" }}
@@ -201,7 +201,7 @@ export default class LoginRegisterDialog extends Component {
           type="password"
           name="confirmPassword"
           label="Konfimasi Password"
-        ></Input.Password>
+        />
         <Spacer y={2} />
         <div className="flex gap-3">
           <Button
@@ -250,7 +250,7 @@ export default class LoginRegisterDialog extends Component {
             css={{ $$inputColor: "#272727" }}
             placeholder="Masukkan email kamu"
             size="md"
-          ></Input>
+          />
           <Spacer y={2} />
           <div className="flex gap-3">
             <Button
@@ -283,18 +283,12 @@ export default class LoginRegisterDialog extends Component {
           <Text weight="light" size={14}>
             Password baru
           </Text>
-          <Input.Password
-            placeholder="Masukkan password baru"
-            size="md"
-          ></Input.Password>
+          <Input.Password placeholder="Masukkan password baru" size="md" />
           <Spacer y={1} />
           <Text weight="light" size={14}>
             Konfimrasi password
           </Text>
-          <Input.Password
-            placeholder="Konfirmasi password baru"
-            size="md"
-          ></Input.Password>
+          <Input.Password placeholder="Konfirmasi password baru" size="md" />
           <Spacer y={2} />
           <div className="flex gap-3">
             <Button

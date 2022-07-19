@@ -24,7 +24,7 @@ export default function CompetitionCarrousel(compe) {
               {index === current && (
                 <div className="content p-20 rounded-[50px]">
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#546FDD] to-[#66E4AB] blur-xl rounded-[50px] opacity-75"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#546FDD] to-[#66E4AB] blur-xl rounded-[50px] opacity-75" />
                     <Grid.Container
                       gap={1}
                       direction="row"

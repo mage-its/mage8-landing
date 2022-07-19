@@ -67,7 +67,7 @@ export default function index(props) {
         </Collapse.Group>
       </div>
       <div className="flex-col mt-20 container mx-auto px-10">
-        <h1 className="text-2xl"></h1>
+        <h1 className="text-2xl" />
         <TitleSubbab subbab="Contact Person" />
         {props.contactPerson}
       </div>
