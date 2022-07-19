@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-import About from "@/layout/About";
 import Footer from "@/components/Footer";
 import { SeoAbout } from "@/components/Seo";
 import Image from "next/image";
