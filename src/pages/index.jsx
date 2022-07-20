@@ -20,8 +20,10 @@ export default function Home() {
         {/* <BackToTop /> */}
         <div className="h-screen flex justify-center items-center relative overflow-x-clip">
           <div className="grid grid-row-2 md:grid-cols-2 sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-5xl w-10/12 h-min place-items-center">
-            <img
-              className="w-2/3 md:w-full"
+            <Image
+              width="500px"
+              height="500px"
+              className="w-2/3 md:w-full z-10"
               src="/static/logo/mage-glow.svg"
               alt="Logo Mage"
             />
@@ -45,18 +47,18 @@ export default function Home() {
           </div>
           <img
             src="/static/background/left-blob-background.svg"
-            className="absolute w-full md:w-9/12 left-[-30vw] top-[20vh]"
+            className="absolute w-full md:w-9/12 left-[-30vw] top-[20vh] z-0"
             alt="left-blob-background"
           />
           <img
             src="/static/background/main-right-blob-background.svg"
-            className="absolute w-full md:w-9/12 right-[-20vw] top-[-50vh] "
+            className="absolute w-full md:w-9/12 right-[-20vw] top-[-50vh] z-0"
             alt="right-blob-background"
           />
           <img
             draggable="false"
             src="/static/background/main-gradient-rectangle.svg"
-            className="w-11/12 h-[calc(100vh+3rem)] absolute top-28 hidden lg:block"
+            className="w-11/12 h-[calc(100vh+3rem)] absolute top-28 hidden lg:block z-0"
             style={{
               objectFit: "fill",
             }}
