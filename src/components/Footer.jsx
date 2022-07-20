@@ -9,7 +9,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="p-10 sm:p-10 bg-[#111111] rounded-t-[28px] border-zinc-700 border-1 shadow-[0_35px_60px_5px_rgba(0,0,0,0.3)] shadow-green-900">
+    <footer className="p-10 sm:p-10 bg-[#111111] rounded-t-[28px] border-zinc-700 border-1 shadow-[0_35px_60px_5px_rgba(0,0,0,0.3)] shadow-green-900 z-50">
       <div className="md:flex md:justify-between">
         <div className="mb-6 md:mb-0">
           <a href="https://mage-its.id" className="flex items-center">
