@@ -8,9 +8,9 @@ export default function CompetitionCard(props) {
   return (
     <div className="p-6 max-w-sm rounded-xl shadow-md bg-[#111111]/80 backdrop-blur aspect-[3/4]">
       <div className="flex flex-col justify-between items-start h-full">
-        <div className="h-[10%] text-center w-full font-semibold text-lg">
+        <h1 className="h-[10%] text-center w-full font-semibold text-lg">
           {props.title}
-        </div>
+        </h1>
         <div
           className={`h-[50%] w-full flex justify-center items-center ${
             props.big ? " p-8" : ""
@@ -42,7 +42,7 @@ export default function CompetitionCard(props) {
         <div className="h-[10%] w-full flex justify-center items-center">
           <Button
             auto
-            className="bg-[#0F9549] text-white w-min hover:shadow-lg hover:shadow-green-500/40"
+            className="bg-[#0F9549] text-white w-min hover:shadow-lg hover:shadow-green-500/40 font-medium"
             onClick={() => router.push(props.link)}
           >
             Selengkapnya
