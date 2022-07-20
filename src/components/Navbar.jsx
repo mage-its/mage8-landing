@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { TbTriangleInverted } from "react-icons/tb";
 import { Button } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import useScroll from "@/hooks/useScroll";
 const Competition = [
   {
     compe: "App Dev",
@@ -40,32 +41,24 @@ export default function Navbar() {
   const [menu, setMenu] = useState();
   const [compemenu, setcompeMenu] = useState();
   const [eventmenu, seteventMenu] = useState();
-  // func to change bg when scroll
-  const [changeBg, setchangeBg] = useState();
-  const [y, setY] = useState(500);
-
-  const handleNavigation = (e) => {
-    const window = e.currentTarget;
-    if (y > window.scrollY) {
-      setchangeBg(true);
-    } else if (y < window.scrollY) {
-      setchangeBg(false);
-    }
-    setY(window.scrollY);
-    return y;
-  };
+  const scrollPos = useScroll();
+  const [blurNavbar, setBlurNavbar] = useState(false);
 
   useEffect(() => {
-    setY(window.scrollY);
+    console.log(scrollPos);
+    if (scrollPos > 0) {
+      setBlurNavbar(true);
+    } else {
+      setBlurNavbar(false);
+    }
+  }, [scrollPos]);
 
-    window.addEventListener("scroll", (e) => handleNavigation(e));
-  }, []);
   return (
     <div
-      className={`flex mx-auto px-10 fixed w-full left-0 top-0 py-4  z-50 rounded-b-[28px] ${
-        !changeBg
-          ? "backdrop-blur-sm bg-white/5 duration-100"
-          : "bg-transparent  backdrop-blur-sm duration-100"
+      className={`flex mx-auto px-10 fixed w-full left-0 top-0 py-4 z-50 rounded-b-[18px] ${
+        blurNavbar
+          ? "backdrop-blur-sm bg-white/5 duration-500"
+          : "bg-transparent duration-500"
       }`}
     >
       <div className="flex w-4/12  lg:w-3/12">
