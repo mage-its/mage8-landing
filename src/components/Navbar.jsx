@@ -4,6 +4,7 @@ import Link from "next/link";
 import { TbTriangleInverted } from "react-icons/tb";
 import { motion } from "framer-motion";
 import useScroll from "@/hooks/useScroll";
+import { Dropdown } from "@nextui-org/react";
 const Competition = [
   {
     compe: "App Dev",
@@ -42,6 +43,18 @@ export default function Navbar() {
   const [eventmenu, seteventMenu] = useState();
   const scrollPos = useScroll();
   const [blurNavbar, setBlurNavbar] = useState(false);
+  const [isHoverCompe, toggleHoverCompe] = useState(false);
+  const [isHoverEvent, toggleHoverEvent] = useState(false);
+
+  const toggleHoverMenuCompe = () => {
+    toggleHoverCompe(!isHoverCompe);
+    setdropDown(!dropDown);
+  };
+
+  const toggleHoverMenuEvent = () => {
+    toggleHoverEvent(!isHoverEvent);
+    setdropdownEvent(!dropDownEvent);
+  };
 
   useEffect(() => {
     // console.log(scrollPos);
@@ -51,6 +64,27 @@ export default function Navbar() {
       setBlurNavbar(false);
     }
   }, [scrollPos]);
+
+  const subMenuAnimate = {
+    enter: {
+      opacity: 1,
+      height: "auto",
+      transition: {
+        duration: 0.2,
+      },
+      display: "block",
+    },
+    exit: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        duration: 0.2,
+      },
+      transitionEnd: {
+        display: "none",
+      },
+    },
+  };
 
   return (
     <div
@@ -86,82 +120,96 @@ export default function Navbar() {
               About
             </Link>
           </li>
-          <li className="ml-20 relative ">
-            <a
-              className="text-white text-md font-normal leading-7"
-              onClick={() => setdropDown((state) => !state)}
+          <li className="ml-20 relative">
+            <motion.div
+              onHoverStart={toggleHoverMenuCompe}
+              onHoverEnd={toggleHoverMenuCompe}
             >
-              <div className="flex link-underline link-underline-black">
-                <div className="flex w-10/12">Competiton</div>
-                <div
-                  className={`flex w-2/12 items-center ml-4  mt-0.5 ${
-                    dropDown
-                      ? "rotate-180 duration-100"
-                      : "rotate-0 duration-100 "
-                  }`}
-                >
-                  <TbTriangleInverted />
-                </div>
-              </div>
-            </a>
-            {dropDown && (
-              <motion.ul
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                exit={{ opacity: 0 }}
-                className="absolute top-16 "
-              >
-                {Competition.map((data, i) => (
-                  <li
-                    key={i}
-                    className="w-[200px] bg-gray-800 rounded shadow-2xl  "
+              <a className="text-white text-md font-normal leading-7">
+                <div className="flex link-underline link-underline-black">
+                  <div className="flex w-10/12">Competiton</div>
+                  <div
+                    className={`flex w-2/12 items-center ml-4  mt-0.5 ${
+                      dropDown
+                        ? "rotate-180 duration-100"
+                        : "rotate-0 duration-100 "
+                    }`}
                   >
-                    <Link
-                      href={data.link}
-                      className="flex py-3 px-6 hover:bg-gray-700/60 text-white"
-                    >
-                      {data.compe}
-                    </Link>
-                  </li>
-                ))}
-              </motion.ul>
-            )}
+                    <TbTriangleInverted />
+                  </div>
+                </div>
+              </a>
+              <motion.div
+                className="absolute top-8"
+                initial="exit"
+                animate={isHoverCompe ? "enter" : "exit"}
+                variants={subMenuAnimate}
+              >
+                <div className="bg-slate-800/80 backdrop-blur-sm border-w flex flex-col gap-3 py-4 px-2 rounded-xl w-max">
+                  <Link href="/competition/appdev">
+                    <div className="hover:bg-slate-50/5 w-full py-2 px-3 rounded-lg cursor-pointer">
+                      App Development
+                    </div>
+                  </Link>
+                  <Link href="/competition/gamedev">
+                    <div className="hover:bg-slate-50/5 w-full py-2 px-3 rounded-lg cursor-pointer">
+                      Game Development
+                    </div>
+                  </Link>
+
+                  <Link href="/competition/iotdev">
+                    <div className="hover:bg-slate-50/5 w-full py-2 px-3 rounded-lg cursor-pointer">
+                      IoT Development
+                    </div>
+                  </Link>
+                  <Link href="/competition/olim">
+                    <div className="hover:bg-slate-50/5 w-full py-2 px-3 rounded-lg cursor-pointer">
+                      Olimpiade
+                    </div>
+                  </Link>
+                </div>
+              </motion.div>
+            </motion.div>
           </li>
           <li className="ml-20 relative">
-            <a
-              className="text-white text-md font-normal leading-7"
-              onClick={() => setdropdownEvent((state) => !state)}
+            <motion.div
+              onHoverStart={toggleHoverMenuEvent}
+              onHoverEnd={toggleHoverMenuEvent}
             >
-              <div className="flex link-underline link-underline-black">
-                <div className="flex w-9/12">Event</div>
-                <div
-                  className={`flex w-3/12 items-center ml-4 mt-0.5 ${
-                    dropDownEvent
-                      ? "rotate-180 duration-100"
-                      : "rotate-0 duration-100 "
-                  }`}
-                >
-                  <TbTriangleInverted />
-                </div>
-              </div>
-            </a>
-            {dropDownEvent && (
-              <ul className="absolute top-16 delay-100">
-                {Listevent.map((data, i) => (
-                  <li
-                    key={i}
-                    className=" w-[150px] bg-gray-800  rounded shadow-2xl "
+              <a className="text-white text-md font-normal leading-7">
+                <div className="flex link-underline link-underline-black">
+                  <div className="flex w-10/12">Event</div>
+                  <div
+                    className={`flex w-3/12 items-center ml-4 mt-0.5 ${
+                      dropDownEvent
+                        ? "rotate-180 duration-100"
+                        : "rotate-0 duration-100 "
+                    }`}
                   >
-                    <Link
-                      href={data.link}
-                      className="flex py-3 px-6 hover:bg-gray-700/60 text-white "
-                    >
-                      {data.event}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
+                    <TbTriangleInverted />
+                  </div>
+                </div>
+              </a>
+              <motion.div
+                className="absolute top-8"
+                initial="exit"
+                animate={isHoverEvent ? "enter" : "exit"}
+                variants={subMenuAnimate}
+              >
+                <div className="bg-slate-800/80 backdrop-blur-sm border-w flex flex-col gap-3 py-4 px-2 rounded-xl w-max">
+                  <Link href="/event/webinar">
+                    <div className="hover:bg-slate-50/5 w-full py-2 px-3 rounded-lg cursor-pointer">
+                      Webinar
+                    </div>
+                  </Link>
+                  <Link href="/event/workshop">
+                    <div className="hover:bg-slate-50/5 w-full py-2 px-3 rounded-lg cursor-pointer">
+                      Workshop
+                    </div>
+                  </Link>
+                </div>
+              </motion.div>
+            </motion.div>
           </li>
           <li className="ml-20 link-underline link-underline-black">
             <Link
