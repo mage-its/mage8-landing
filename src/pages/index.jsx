@@ -124,7 +124,7 @@ export default function Home() {
               title="Application Development"
               kategori="Mahasiswa/Siswa"
               harga="Rp.100K - Rp.90K"
-              image="/static/logo/AppDev.png"
+              image="/static/logo/AppDevLogo.png"
               link="/competition/appdev"
             />
             <CompetitionCard
