@@ -115,7 +115,7 @@ export default function Home() {
             <CompetitionCard
               title="Game Development"
               kategori="Mahasiswa/Siswa"
-              harga="Rp.100K - Rp.90K"
+              harga="Rp.100K/Rp.90K"
               image="/static/logo/GameDev.png"
               link="/competition/gamedev"
             />
@@ -123,7 +123,7 @@ export default function Home() {
               big
               title="Application Development"
               kategori="Mahasiswa/Siswa"
-              harga="Rp.100K - Rp.90K"
+              harga="Rp.100K/Rp.90K"
               image="/static/logo/AppDevLogo.png"
               link="/competition/appdev"
             />
