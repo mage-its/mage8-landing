@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { TbTriangleInverted } from "react-icons/tb";
-import { Button } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import useScroll from "@/hooks/useScroll";
 const Competition = [
@@ -45,7 +44,7 @@ export default function Navbar() {
   const [blurNavbar, setBlurNavbar] = useState(false);
 
   useEffect(() => {
-    console.log(scrollPos);
+    // console.log(scrollPos);
     if (scrollPos > 0) {
       setBlurNavbar(true);
     } else {
@@ -62,27 +61,26 @@ export default function Navbar() {
       }`}
     >
       <div className="flex w-4/12  lg:w-3/12">
-        <Image
-          alt="Logo-Mage"
-          width={60}
-          height={60}
-          src="/static/logo/mage-whiteshade.png"
-          className="pb-4"
-        />
+        <Link href="/">
+          <Image
+            alt="Logo-Mage"
+            width={60}
+            height={60}
+            src="/static/logo/mage-whiteshade.png"
+            className="pb-4 cursor-pointer"
+          />
+        </Link>
       </div>
       <div className="flex lg:w-9/12 w-8/12 justify-end items-center self-center mt-5 ">
         <ul className="flex-row hidden lg:flex ">
           <li className="ml-20 link-underline link-underline-black">
-            <Link
-              className="text-white text-md font-normal leading-7   "
-              href="/"
-            >
+            <Link className="text-white text-md font-normal leading-7" href="/">
               Home
             </Link>
           </li>
           <li className="ml-20 link-underline link-underline-black">
             <Link
-              className="text-white text-md font-normal leading-7   "
+              className="text-white text-md font-normal leading-7"
               href="/about"
             >
               About
@@ -90,7 +88,7 @@ export default function Navbar() {
           </li>
           <li className="ml-20 relative ">
             <a
-              className="text-white text-md font-normal leading-7 "
+              className="text-white text-md font-normal leading-7"
               onClick={() => setdropDown((state) => !state)}
             >
               <div className="flex link-underline link-underline-black">
@@ -118,10 +116,11 @@ export default function Navbar() {
                     key={i}
                     className="w-[200px] bg-gray-800 rounded shadow-2xl  "
                   >
-                    <Link href={data.link}>
-                      <a className="flex py-3 px-6 hover:bg-gray-700/60 text-white">
-                        {data.compe}
-                      </a>
+                    <Link
+                      href={data.link}
+                      className="flex py-3 px-6 hover:bg-gray-700/60 text-white"
+                    >
+                      {data.compe}
                     </Link>
                   </li>
                 ))}
@@ -147,16 +146,17 @@ export default function Navbar() {
               </div>
             </a>
             {dropDownEvent && (
-              <ul className="absolute  top-16 delay-100">
+              <ul className="absolute top-16 delay-100">
                 {Listevent.map((data, i) => (
                   <li
                     key={i}
                     className=" w-[150px] bg-gray-800  rounded shadow-2xl "
                   >
-                    <Link href={data.link}>
-                      <a className="flex py-3 px-6 hover:bg-gray-700/60 text-white ">
-                        {data.event}
-                      </a>
+                    <Link
+                      href={data.link}
+                      className="flex py-3 px-6 hover:bg-gray-700/60 text-white "
+                    >
+                      {data.event}
                     </Link>
                   </li>
                 ))}
@@ -195,8 +195,8 @@ export default function Navbar() {
       </div>
       {menu && (
         <div
-          className={`  overflow-hidden  bg-black lg:hidden w-full h-[90rem] lg:bg-none fixed  top-0 p-7 px-5 lg:p-0   transition-all duration-500 ease-in  ${
-            setMenu ? "left-0 duration-100 " : "-left-[500px] duration-100"
+          className={`overflow-hidden  bg-black lg:hidden w-full h-[90rem] lg:bg-none fixed  top-0 p-7 px-5 lg:p-0   transition-all duration-500 ease-in  ${
+            menu ? "left-0 duration-100 " : "-left-[500px] duration-100"
           }`}
         >
           <button
@@ -223,9 +223,8 @@ export default function Navbar() {
             <li>
               <div className="flex ">
                 <div className="link-underline link-underline-black">
-                  <Link href="/">
-                    {" "}
-                    <a className="text-2xl font-semibold leading-7 "> HOME</a>
+                  <Link href="/" className="text-2xl font-semibold leading-7 ">
+                    Home
                   </Link>
                 </div>
               </div>
@@ -233,8 +232,11 @@ export default function Navbar() {
             <li className="mt-4">
               <div className="flex mt-4">
                 <div className="link-underline link-underline-black">
-                  <Link href="/about">
-                    <a className="text-2xl font-semibold leading-7 "> ABOUT</a>
+                  <Link
+                    href="/about"
+                    className="text-2xl font-semibold leading-7 "
+                  >
+                    About
                   </Link>
                 </div>
               </div>
@@ -247,7 +249,7 @@ export default function Navbar() {
                       className="text-2xl font-semibold leading-7 "
                       onClick={() => setcompeMenu((state) => !state)}
                     >
-                      COMPETITION
+                      Competition
                     </a>
                   </div>
                   <div
@@ -265,13 +267,13 @@ export default function Navbar() {
 
               {compemenu &&
                 Competition.map((data, i) => (
-                  <a
+                  <Link
                     href={data.link}
                     className="text-md font-normal leading-7"
                     key={i}
                   >
                     {data.compe}
-                  </a>
+                  </Link>
                 ))}
             </li>
             <li className="relative flex flex-col mt-4">
@@ -282,7 +284,7 @@ export default function Navbar() {
                       className="text-2xl font-semibold leading-7 "
                       onClick={() => seteventMenu((state) => !state)}
                     >
-                      EVENT
+                      Event
                     </a>
                   </div>
                   <div
@@ -299,20 +301,23 @@ export default function Navbar() {
               </div>
               {eventmenu &&
                 Listevent.map((data, i) => (
-                  <a
+                  <Link
                     href={data.link}
                     className="text-md font-normal leading-7"
                     key={i}
                   >
                     {data.event}
-                  </a>
+                  </Link>
                 ))}
             </li>
             <li>
               <div className="flex mt-4 ">
                 <div className="flex mt-4 link-underline link-underline-black">
-                  <Link href="/auth/login">
-                    <a className="text-2xl font-semibold leading-7 ">LOGIN</a>
+                  <Link
+                    href="/auth/login"
+                    className="text-2xl font-semibold leading-7 "
+                  >
+                    Login
                   </Link>
                 </div>
               </div>
