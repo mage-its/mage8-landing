@@ -18,7 +18,7 @@ function VerifyEmail({ success }) {
   return (
     <>
       <Seo templateTitle="Verify Email" />
-      <div className="h-screen footer-b-background bg-cover">
+      <div className="h-screen bg-footer-b-background bg-cover">
         <Navbar />
         {success ? (
           <Grid.Container
@@ -62,17 +62,9 @@ function VerifyEmail({ success }) {
                 Maaf,&nbsp;
               </Text>
               <Text className="text-2xl lg:text-6xl text-center">
-                token sudah tidak berlaku
+                token kamu sudah tidak berlaku
               </Text>
             </Grid.Container>
-            <Spacer y={0.5} />
-            <Text className="text-center">
-              Klik tombol dibawah untuk mengirimkan token verifikasi lagi
-            </Text>
-            <Spacer y={2} />
-            <Button className="w-min self-center bg-[#9750DD]" color="primary">
-              Kirim ulang
-            </Button>
           </Grid.Container>
         )}
         <Footer />

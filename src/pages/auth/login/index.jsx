@@ -18,7 +18,7 @@ function Login() {
   return (
     <>
       <Seo templateTitle="Login" />
-      <div className="h-screen footer-b-background bg-cover">
+      <div className="h-screen bg-footer-b-background bg-cover">
         <Grid.Container
           direction="row"
           className="h-screen w-screen"
