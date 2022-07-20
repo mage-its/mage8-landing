@@ -6,6 +6,15 @@ import { Button, Grid, Spacer, Text } from "@nextui-org/react";
 import { useRouter } from "next/router";
 
 function VerifyEmail({ success }) {
+  if (typeof window !== "undefined") {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user && success) {
+      const newUser = user;
+      newUser.user.isEmailVerified = true;
+      localStorage.setItem("user", JSON.stringify(newUser));
+    }
+  }
+
   return (
     <>
       <Seo templateTitle="Verify Email" />
