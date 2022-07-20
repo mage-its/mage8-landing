@@ -34,7 +34,7 @@ a {
   border-bottom-width: 0;
   background-image: linear-gradient(transparent, transparent),
     linear-gradient(#fff, #fff);
-  background-size: 0 3px;
+  background-size: 0 2px;
   background-position: 0 100%;
   background-repeat: no-repeat;
   transition: background-size 0.5s ease-in-out;
@@ -46,7 +46,7 @@ a {
 }
 
 .link-underline:hover {
-  background-size: 100% 3px;
+  background-size: 100% 2px;
   background-position: 0 100%;
 }
 
@@ -54,7 +54,7 @@ a {
   border-bottom-width: 0;
   background-image: linear-gradient(transparent, transparent),
     linear-gradient(#fff, #fff);
-  background-size: 0 3px;
+  background-size: 0 2px;
   background-position: 0 1000%;
   background-repeat: no-repeat;
   transition: background-size 0.5s ease-in-out;
@@ -67,7 +67,7 @@ a {
 .line {
   background-image: linear-gradient(transparent, transparent),
     linear-gradient(#a0e880, #a0e880);
-  background-size: 0 3px;
+  background-size: 0 2px;
   background-position: 0 100%;
   background-repeat: no-repeat;
 }
