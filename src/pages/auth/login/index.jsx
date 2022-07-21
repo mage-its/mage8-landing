@@ -4,8 +4,6 @@ import authService from "@/services/auth.service";
 import { Button, Card, Grid, Spacer, Text, Input } from "@nextui-org/react";
 import { useRouter } from "next/router";
 import LoginRegisterDialog from "@/components/LoginRegisterDialog";
-import Link from "next/link";
-import Head from "next/head";
 import Seo from "@/components/Seo";
 
 function Login() {
