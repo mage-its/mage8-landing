@@ -1,10 +1,20 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useCycle } from "framer-motion";
 import useScroll from "@/hooks/useScroll";
 import { Dropdown } from "@nextui-org/react";
-import { IconChevronDown } from "@tabler/icons";
+import {
+  IconCalendarEvent,
+  IconChevronDown,
+  IconCode,
+  IconHome,
+  IconInfoCircle,
+  IconPoint,
+  IconTrophy,
+  IconUser,
+} from "@tabler/icons";
+import { NavbarBurger } from "./NavbarBurger";
 const Competition = [
   {
     compe: "App Dev",
@@ -45,6 +55,7 @@ export default function Navbar() {
   const [blurNavbar, setBlurNavbar] = useState(false);
   const [isHoverCompe, toggleHoverCompe] = useState(false);
   const [isHoverEvent, toggleHoverEvent] = useState(false);
+  const [isOpen, toggleOpen] = useCycle(false, true);
 
   const toggleHoverMenuCompe = () => {
     toggleHoverCompe(!isHoverCompe);
@@ -82,6 +93,25 @@ export default function Navbar() {
       },
       transitionEnd: {
         display: "none",
+      },
+    },
+  };
+
+  const sidebar = {
+    open: (height = 1000) => ({
+      opacity: 1,
+      height,
+      transition: {
+        type: "easeInOut",
+        duration: 0.2,
+      },
+    }),
+    closed: {
+      opacity: 0,
+      height: 0,
+      transition: {
+        type: "easeInOut",
+        duration: 0.2,
       },
     },
   };
@@ -221,158 +251,92 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-      <div className=" flex lg:hidden mb-4 cursor-pointer">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="icon icon-tabler icon-tabler-menu-2"
-          width="44"
-          height="44"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="#ffffff"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          onClick={() => setMenu((state) => !state)}
+      <motion.div
+        initial={false}
+        animate={isOpen ? "open" : "closed"}
+        className="flex lg:hidden cursor-pointer"
+      >
+        <motion.div
+          className="absolute top-0 left-0 bottom-0 w-full pt-28 px-8 h-screen bg-black/90 backdrop-blur-sm -z-10"
+          variants={sidebar}
         >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <line x1="4" y1="6" x2="20" y2="6" />
-          <line x1="4" y1="12" x2="20" y2="12" />
-          <line x1="4" y1="18" x2="20" y2="18" />
-        </svg>
-      </div>
-      {menu && (
-        <div
-          className={`overflow-hidden  bg-black lg:hidden w-full h-[90rem] lg:bg-none fixed  top-0 p-7 px-5 lg:p-0   transition-all duration-500 ease-in  ${
-            menu ? "left-0 duration-100 " : "-left-[500px] duration-100"
-          }`}
-        >
-          <button
-            className="absolute top-5 right-5 lg:hidden"
-            onClick={() => setMenu((state) => !state)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="feather feather-x"
-            >
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-          </button>
-          <ul className="lg:space-x-14 flex lg:items-center flex-col lg:flex-row space-y-4 lg:space-y-0">
-            <li>
-              <div className="flex ">
-                <div className="link-underline link-underline-black">
-                  <Link href="/" className="text-2xl font-semibold leading-7 ">
-                    Home
-                  </Link>
-                </div>
+          <div className="flex flex-col justify-start gap-6 text-lg">
+            <Link href="/">
+              <div className="flex flex-row gap-2">
+                <IconHome fill="#FFF" color="#111" strokeWidth={0.5} />
+                Home
               </div>
-            </li>
-            <li className="mt-4">
-              <div className="flex mt-4">
-                <div className="link-underline link-underline-black">
-                  <Link
-                    href="/about"
-                    className="text-2xl font-semibold leading-7 "
-                  >
-                    About
-                  </Link>
-                </div>
+            </Link>
+            <Link href="/about">
+              <div className="flex flex-row gap-2">
+                <IconInfoCircle fill="#FFF" color="#111" />
+                About
               </div>
-            </li>
-            <li className="relative flex flex-col mt-4">
-              <div className="flex mt-4">
-                <div className=" flex link-underline link-underline-black">
-                  <div className="flex w-9/12">
-                    <a
-                      className="text-2xl font-semibold leading-7 "
-                      onClick={() => setcompeMenu((state) => !state)}
-                    >
-                      Competition
-                    </a>
+            </Link>
+            <div className="flex flex-col gap-2">
+              <div className="flex flex-row gap-2">
+                <IconTrophy fill="#FFF" />
+                Competition
+                <IconChevronDown className="w-4" />
+              </div>
+              <div className="flex flex-col gap-5 text-base font-medium pl-6 text-gray-500">
+                <Link href="/competition/appdev">
+                  <div className="flex flex-row gap-1">
+                    <IconPoint className="w-2 fill-gray-500" />
+                    App Development
                   </div>
-                  <div
-                    onClick={() => setcompeMenu((state) => !state)}
-                    className={`flex w-3/12 items-center ml-10 ${
-                      compemenu
-                        ? "rotate-180 duration-100 "
-                        : "rotate-0 duration-100  "
-                    }`}
-                  >
-                    <IconChevronDown />
+                </Link>
+                <Link href="/competition/appdev">
+                  <div className="flex flex-row gap-1">
+                    <IconPoint className="w-2 fill-gray-500" />
+                    Game Development
                   </div>
-                </div>
-              </div>
-
-              {compemenu &&
-                Competition.map((data, i) => (
-                  <Link
-                    href={data.link}
-                    className="text-md font-normal leading-7"
-                    key={i}
-                  >
-                    {data.compe}
-                  </Link>
-                ))}
-            </li>
-            <li className="relative flex flex-col mt-4">
-              <div className="flex mt-4">
-                <div className=" flex link-underline link-underline-black">
-                  <div className="flex w-8/12">
-                    <a
-                      className="text-2xl font-semibold leading-7 "
-                      onClick={() => seteventMenu((state) => !state)}
-                    >
-                      Event
-                    </a>
+                </Link>
+                <Link href="/competition/appdev">
+                  <div className="flex flex-row gap-1">
+                    <IconPoint className="w-2 fill-gray-500" />
+                    IoT Development
                   </div>
-                  <div
-                    onClick={() => seteventMenu((state) => !state)}
-                    className={`flex w-4/12 items-center ml-6 ${
-                      eventmenu
-                        ? "rotate-180 duration-100"
-                        : "rotate-0 duration-100 "
-                    }`}
-                  >
-                    <IconChevronDown />
+                </Link>
+                <Link href="/competition/appdev">
+                  <div className="flex flex-row gap-1">
+                    <IconPoint className="w-2 fill-gray-500" />
+                    Olimpiade
                   </div>
-                </div>
+                </Link>
               </div>
-              {eventmenu &&
-                Listevent.map((data, i) => (
-                  <Link
-                    href={data.link}
-                    className="text-md font-normal leading-7"
-                    key={i}
-                  >
-                    {data.event}
-                  </Link>
-                ))}
-            </li>
-            <li>
-              <div className="flex mt-4 ">
-                <div className="flex mt-4 link-underline link-underline-black">
-                  <Link
-                    href="/auth/login"
-                    className="text-2xl font-semibold leading-7 "
-                  >
-                    Login
-                  </Link>
-                </div>
+            </div>
+            <div className="flex flex-col gap-2">
+              <div className="flex flex-row gap-2">
+                <IconTrophy fill="#FFF" />
+                Event
+                <IconChevronDown className="w-4" />
               </div>
-            </li>
-          </ul>
-        </div>
-      )}
+              <div className="flex flex-col gap-5 text-base font-medium pl-6 text-gray-500">
+                <Link href="/event/webinar">
+                  <div className="flex flex-row gap-1">
+                    <IconPoint className="w-2 fill-gray-500" />
+                    Webinar
+                  </div>
+                </Link>
+                <Link href="/event/workshop">
+                  <div className="flex flex-row gap-1">
+                    <IconPoint className="w-2 fill-gray-500" />
+                    Workshop
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <Link href="/auth/login">
+              <div className="flex flex-row gap-2">
+                <IconUser fill="#FFF" />
+                Login
+              </div>
+            </Link>
+          </div>
+        </motion.div>
+        <NavbarBurger toggle={() => toggleOpen()} />
+      </motion.div>
     </div>
   );
 }
