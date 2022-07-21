@@ -1,11 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from "next/head";
 import Image from "next/image";
-import CompetitionCarrousel from "../components/CompetitionCarrousel";
-import { CompetitionData } from "../data/CompetitionData";
-import TitleSubbab from "../components/Title";
-import { Button, Collapse, Text, Grid, Card } from "@nextui-org/react";
-import Navbar from "@/components/Navbar";
+import { Text } from "@nextui-org/react";
 import Layout from "@/layout/MainLayout";
 import { motion } from "framer-motion";
 import Seo from "@/components/Seo";
@@ -15,7 +10,6 @@ import GameDevLogo from "@/assets/images/logo/GameDev.png";
 import IoTDevLogo from "@/assets/images/logo/IoTDev.png";
 import OlimpiadeLogo from "@/assets/images/logo/Olim.png";
 import MageGlowLogo from "@/assets/images/logo/mage-glow.svg";
-import MageTextLogo from "@/assets/images/logo/mage-text.svg";
 
 export default function Home() {
   return (
@@ -32,7 +26,7 @@ export default function Home() {
               src={MageGlowLogo}
               alt="Logo Mage"
             />
-            <div className="grid grid-row-2 place-items-center h-min gap-2">
+            <div className="grid grid-row-2 place-items-center h-min gap-2 z-10">
               <img
                 className="w-2/3 md:w-full"
                 src="/static/logo/mage-text.svg"

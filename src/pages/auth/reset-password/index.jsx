@@ -1,11 +1,8 @@
-import Footer from "@/components/Footer";
 import LoginRegisterDialog from "@/components/LoginRegisterDialog";
-import Navbar from "@/components/Navbar";
 import Seo from "@/components/Seo";
-import authService from "@/services/auth.service";
-import { Button, Grid, Spacer, Text } from "@nextui-org/react";
+import { Grid } from "@nextui-org/react";
 import { useRouter } from "next/router";
-import { Component, useEffect } from "react";
+import { useEffect } from "react";
 
 export default function VerifyEmail() {
   const router = useRouter();

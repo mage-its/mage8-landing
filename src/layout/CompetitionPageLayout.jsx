@@ -3,8 +3,6 @@ import Image from "next/image";
 import TitleSubbab from "@/components/Title";
 import Guidebook from "@/components/Guidebook";
 import { Collapse, Text } from "@nextui-org/react";
-import CompetitionCarrousel from "@/components/CompetitionCarrousel";
-import { CompetitionData } from "../data/CompetitionData";
 import Link from "next/link";
 export default function index(props) {
   return (

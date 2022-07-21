@@ -3,11 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useCycle } from "framer-motion";
 import useScroll from "@/hooks/useScroll";
-import { Dropdown } from "@nextui-org/react";
 import {
-  IconCalendarEvent,
   IconChevronDown,
-  IconCode,
   IconHome,
   IconInfoCircle,
   IconPoint,
@@ -15,42 +12,10 @@ import {
   IconUser,
 } from "@tabler/icons";
 import { NavbarBurger } from "./NavbarBurger";
-const Competition = [
-  {
-    compe: "App Dev",
-    link: "/competition/appdev",
-  },
-  {
-    compe: "Game Dev",
-    link: "/competition/gamedev",
-  },
-  {
-    compe: "IOT Dev",
-    link: "/competition/iotdev",
-  },
-  {
-    compe: "Olimpiade",
-    link: "/competition/olim",
-  },
-];
-
-const Listevent = [
-  {
-    event: "Workshop",
-    link: "/workshop",
-  },
-  {
-    event: "Webinar",
-    link: "/webinar",
-  },
-];
 
 export default function Navbar() {
   const [dropDown, setdropDown] = useState();
   const [dropDownEvent, setdropdownEvent] = useState();
-  const [menu, setMenu] = useState();
-  const [compemenu, setcompeMenu] = useState();
-  const [eventmenu, seteventMenu] = useState();
   const scrollPos = useScroll();
   const [blurNavbar, setBlurNavbar] = useState(false);
   const [isHoverCompe, toggleHoverCompe] = useState(false);

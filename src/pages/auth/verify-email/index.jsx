@@ -2,8 +2,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Seo from "@/components/Seo";
 import authService from "@/services/auth.service";
-import { Button, Grid, Spacer, Text } from "@nextui-org/react";
-import { useRouter } from "next/router";
+import { Grid, Text } from "@nextui-org/react";
 
 function VerifyEmail({ success }) {
   if (typeof window !== "undefined") {
