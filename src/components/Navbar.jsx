@@ -251,19 +251,19 @@ export default function Navbar() {
                     App Development
                   </div>
                 </Link>
-                <Link href="/competition/appdev">
+                <Link href="/competition/gamedev">
                   <div className="flex flex-row gap-1">
                     <IconPoint className="w-2 fill-gray-500" />
                     Game Development
                   </div>
                 </Link>
-                <Link href="/competition/appdev">
+                <Link href="/competition/iotdev">
                   <div className="flex flex-row gap-1">
                     <IconPoint className="w-2 fill-gray-500" />
                     IoT Development
                   </div>
                 </Link>
-                <Link href="/competition/appdev">
+                <Link href="/competition/olim">
                   <div className="flex flex-row gap-1">
                     <IconPoint className="w-2 fill-gray-500" />
                     Olimpiade
