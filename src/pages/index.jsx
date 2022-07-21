@@ -67,6 +67,7 @@ export default function Home() {
         <div className="h-[50vh] md:h-[80vh] xl:h-screen flex justify-center items-center relative">
           <motion.div
             animate={{ y: -100 }}
+            transition={{ type: "tween", ease: "easeOut", duration: 1 }}
             className="absolute top-0 aspect-video w-10/12 lg:w-1/2  rounded-xl overflow-hidden duration-500 hover:shadow-2xl hover:shadow-green-400/20 "
           >
             <iframe

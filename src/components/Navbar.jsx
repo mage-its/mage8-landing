@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, useCycle } from "framer-motion";
 import useScroll from "@/hooks/useScroll";
 import {
+  IconCalendarEvent,
   IconChevronDown,
   IconHome,
   IconInfoCircle,
@@ -238,7 +239,7 @@ export default function Navbar() {
                 About
               </div>
             </Link>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-5">
               <div className="flex flex-row gap-2">
                 <IconTrophy fill="#FFF" />
                 Competition
@@ -271,9 +272,9 @@ export default function Navbar() {
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-5">
               <div className="flex flex-row gap-2">
-                <IconTrophy fill="#FFF" />
+                <IconCalendarEvent fill="#FFF" color="#111" strokeWidth={0.5} />
                 Event
                 <IconChevronDown className="w-4" />
               </div>
