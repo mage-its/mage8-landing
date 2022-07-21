@@ -10,7 +10,12 @@ import Layout from "@/layout/MainLayout";
 import { motion } from "framer-motion";
 import Seo from "@/components/Seo";
 import CompetitionCard from "@/components/CompetitionCard";
-// import BackToTop from "@/components/BackToTop";
+import AppDevLogo from "@/assets/images/logo/AppDevLogo.png";
+import GameDevLogo from "@/assets/images/logo/GameDev.png";
+import IoTDevLogo from "@/assets/images/logo/IoTDev.png";
+import OlimpiadeLogo from "@/assets/images/logo/Olim.png";
+import MageGlowLogo from "@/assets/images/logo/mage-glow.svg";
+import MageTextLogo from "@/assets/images/logo/mage-text.svg";
 
 export default function Home() {
   return (
@@ -24,7 +29,7 @@ export default function Home() {
               width="500px"
               height="500px"
               className="w-2/3 md:w-full z-10"
-              src="/static/logo/mage-glow.svg"
+              src={MageGlowLogo}
               alt="Logo Mage"
             />
             <div className="grid grid-row-2 place-items-center h-min gap-2">
@@ -118,7 +123,7 @@ export default function Home() {
               title="Game Development"
               kategori="Mahasiswa/Siswa"
               harga="Rp.100K/Rp.90K"
-              image="/static/logo/GameDev.png"
+              image={GameDevLogo}
               link="/competition/gamedev"
             />
             <CompetitionCard
@@ -126,7 +131,7 @@ export default function Home() {
               title="Application Development"
               kategori="Mahasiswa/Siswa"
               harga="Rp.100K/Rp.90K"
-              image="/static/logo/AppDevLogo.png"
+              image={AppDevLogo}
               link="/competition/appdev"
             />
             <CompetitionCard
@@ -134,7 +139,7 @@ export default function Home() {
               title="IoT Development"
               kategori="Umum"
               harga="Rp.110.000,-"
-              image="/static/logo/IoTDev.png"
+              image={IoTDevLogo}
               link="/competition/iotdev"
             />
             <CompetitionCard
@@ -142,7 +147,7 @@ export default function Home() {
               title="Olimpiade"
               kategori="Siswa"
               harga="Rp.60.000,-"
-              image="/static/logo/Olim.png"
+              image={OlimpiadeLogo}
               link="/competition/olim"
             />
           </div>

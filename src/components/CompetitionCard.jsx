@@ -23,6 +23,7 @@ export default function CompetitionCard(props) {
               className="object-scale-down"
               width="200px"
               height="400px"
+              placeholder="blur"
             />
           </div>
         </div>
