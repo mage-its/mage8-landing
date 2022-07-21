@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { TbTriangleInverted } from "react-icons/tb";
 import { motion } from "framer-motion";
 import useScroll from "@/hooks/useScroll";
 import { Dropdown } from "@nextui-org/react";
+import { IconChevronDown } from "@tabler/icons";
 const Competition = [
   {
     compe: "App Dev",
@@ -135,7 +135,7 @@ export default function Navbar() {
                         : "rotate-0 duration-100 "
                     }`}
                   >
-                    <TbTriangleInverted />
+                    <IconChevronDown />
                   </div>
                 </div>
               </a>
@@ -186,7 +186,7 @@ export default function Navbar() {
                         : "rotate-0 duration-100 "
                     }`}
                   >
-                    <TbTriangleInverted />
+                    <IconChevronDown />
                   </div>
                 </div>
               </a>
@@ -308,7 +308,7 @@ export default function Navbar() {
                         : "rotate-0 duration-100  "
                     }`}
                   >
-                    <TbTriangleInverted />
+                    <IconChevronDown />
                   </div>
                 </div>
               </div>
@@ -343,7 +343,7 @@ export default function Navbar() {
                         : "rotate-0 duration-100 "
                     }`}
                   >
-                    <TbTriangleInverted />
+                    <IconChevronDown />
                   </div>
                 </div>
               </div>
