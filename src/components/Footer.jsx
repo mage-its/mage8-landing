@@ -158,7 +158,7 @@ export default function Footer() {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://www.tiktok.com/@mage.its"
+            href="https://www.tiktok.com/@mage8_"
           >
             <IconBrandTiktok className="text-gray-500 hover:text-gray-900 dark:hover:text-white" />
           </a>
