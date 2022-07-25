@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.9",
-    "@tabler/icons": "^1.78.0",
+    "@tabler/icons": "^1.78.1",
     "axios": "^0.27.2",
     "firebase": "^9.9.1",
     "formik": "^2.2.9",
