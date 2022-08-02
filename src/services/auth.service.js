@@ -3,12 +3,11 @@ import axios from "axios";
 const API_URL = process.env.NEXT_PUBLIC_BACKEND_API_URL + "v1/auth/";
 
 class AuthService {
-  async login(user) {
-    const response = await axios.post(`${API_URL}login`, {
-      email: user.email,
-      password: user.password,
+  login(email, password) {
+    return axios.post(`${API_URL}login`, {
+      email: email,
+      password: password,
     });
-    return response.data;
   }
 
   googleLogin(idToken) {
@@ -27,12 +26,13 @@ class AuthService {
     });
   }
 
-  async register(user) {
-    const response = await axios.post(`${API_URL}register`, user);
-    if (response.data.tokens) {
-      localStorage.setItem("user", JSON.stringify(response.data));
-    }
-    return response.data;
+  register(name, email, password, token) {
+    return axios.post(`${API_URL}register`, {
+      name,
+      email,
+      password,
+      recaptchaResponse: token,
+    });
   }
 
   verifyEmailByToken(token) {
