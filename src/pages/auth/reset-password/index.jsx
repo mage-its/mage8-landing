@@ -1,4 +1,4 @@
-import LoginRegisterDialog from "@/components/LoginRegisterDialog";
+import AuthDialog from "@/components/AuthDialog/AuthDialog";
 import Seo from "@/components/Seo";
 import { Grid } from "@nextui-org/react";
 import { useRouter } from "next/router";
@@ -32,10 +32,7 @@ export default function VerifyEmail() {
           alignContent="center"
         >
           <div className="w-full m-3 max-w-md md:max-w-lg lg:max-w-xl">
-            <LoginRegisterDialog
-              initialState={"resetPassword"}
-              onClose={handleClose}
-            />
+            <AuthDialog section={"resetPassword"} onClose={handleClose} />
           </div>
         </Grid.Container>
       </div>

@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import authService from "@/services/auth.service";
 import { Button, Card, Grid, Spacer, Text, Input } from "@nextui-org/react";
 import { useRouter } from "next/router";
-import LoginRegisterDialog from "@/components/LoginRegisterDialog";
+import AuthDialog from "@/components/AuthDialog/AuthDialog";
 import Seo from "@/components/Seo";
 
 function Login() {
@@ -24,7 +24,7 @@ function Login() {
           alignContent="center"
         >
           <div className="w-full m-3 max-w-md md:max-w-lg lg:max-w-xl">
-            <LoginRegisterDialog onClose={handleClose} />
+            <AuthDialog onClose={handleClose} section={"login"} />
           </div>
         </Grid.Container>
       </div>
