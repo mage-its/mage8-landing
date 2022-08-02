@@ -89,8 +89,8 @@ export default function Home() {
             >
               Rp. 33.500.000,-
             </Text>
-            <div className="text-xl text-center absolute left-[-1%] 2xl:left-[-5%] top-[-15%] sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold">
-              Total Hadiah
+            <div className="text-lg text-center absolute left-[-1%] 2xl:left-[-5%] top-[-15%] sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold">
+              Total Hadiah Senilai
             </div>
             <div className="text-sm absolute sm:text-lg md:text-xl xl:text-2xl 2xl:text-3xl font-medium bottom-8 right-[5%]">
               + Freepass Teknik Komputer*
