@@ -116,7 +116,7 @@ export default function LoginSection({ setState, formik }) {
                   setGoogleLoading(false);
                 });
             })
-            .finally(() => {
+            .catch(() => {
               setGoogleLoading(false);
             });
         }}
