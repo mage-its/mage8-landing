@@ -23,6 +23,7 @@ export default function RegisterSection({ setState, formik }) {
         type="text"
         name="name"
         label="Nama"
+        fullWidth
       />
       <Spacer y={1.5} />
       <Input
@@ -35,6 +36,7 @@ export default function RegisterSection({ setState, formik }) {
         type="email"
         name="email"
         label="Email"
+        fullWidth
       />
       <Spacer y={1.5} />
       <Input.Password
@@ -47,6 +49,7 @@ export default function RegisterSection({ setState, formik }) {
         type="password"
         name="password"
         label="Password"
+        fullWidth
       />
       <Spacer y={1.5} />
       <Input.Password
@@ -59,6 +62,7 @@ export default function RegisterSection({ setState, formik }) {
         type="password"
         name="confirmPassword"
         label="Konfimasi Password"
+        fullWidth
       />
       <Spacer y={2} />
       <div className="flex gap-3">

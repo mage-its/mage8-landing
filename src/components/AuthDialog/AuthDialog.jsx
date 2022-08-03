@@ -81,7 +81,7 @@ export default function AuthDialog({ section, onClose }) {
   });
 
   return (
-    <motion.div
+    <div
       layout="size"
       className="w-full rounded-xl bg-[#111111] bg-login-background bg-repeat bg-cover overflow-auto"
     >
@@ -117,6 +117,6 @@ export default function AuthDialog({ section, onClose }) {
           <Spacer y={2} />
         </Grid.Container>
       </div>
-    </motion.div>
+    </div>
   );
 }

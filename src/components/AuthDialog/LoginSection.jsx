@@ -14,84 +14,78 @@ export default function LoginSection({ setState, formik }) {
 
   return (
     <Grid.Container direction="column" className="px-12">
-      <form
+      <Input
+        css={{ $$inputColor: "#272727" }}
+        placeholder="Masukkan email kamu"
+        onChange={formik.handleChange}
+        helperText={touched && formik.errors.email}
+        helperColor={formik.errors.email ? "error" : "primary"}
+        type="email"
+        name="email"
+        label="Email"
+        fullWidth
+      />
+      <Spacer y={1.5} />
+      <Input.Password
+        css={{ $$inputColor: "#272727" }}
+        placeholder="Masukkan password kamu"
+        size="md"
+        helperText={touched && formik.errors.password}
+        helperColor={formik.errors.password ? "error" : "primary"}
+        onChange={formik.handleChange}
+        type="password"
+        name="password"
+        label="Password"
+        fullWidth
+      />
+      <Text
+        onClick={() => setState("forgotPassword")}
+        size={"0.8rem"}
+        className="text-right cursor-pointer select-none"
+      >
+        Lupa password?
+      </Text>
+      <Spacer y={1.5} />
+      <Button
         style={{
           width: "100%",
         }}
+        flat
+        className="bg-[#06381b]"
+        color="primary"
+        onClick={async () => {
+          setTouched(true);
+          const errors = await formik.validateForm();
+          if (Object.keys(errors).length === 0) {
+            setLoading(true);
+            authService
+              .login(formik.values.email, formik.values.password)
+              .then((res) => {
+                localStorage.setItem("user", JSON.stringify(res.data));
+                Router.push("/dashboard");
+              })
+              .catch((error) => {
+                switch (error.response.data.message) {
+                  case "Incorrect email or password":
+                    toast.error("Email atau password salah");
+                    break;
+                  case "Cannot login with email and password, use google instead":
+                    toast.error(
+                      "Email kamu sudah terdaftar menggunakan Google"
+                    );
+                    break;
+                  default:
+                    break;
+                }
+              })
+              .finally(() => {
+                setLoading(false);
+              });
+          }
+        }}
       >
-        <Input
-          css={{ $$inputColor: "#272727" }}
-          placeholder="Masukkan email kamu"
-          onChange={formik.handleChange}
-          helperText={touched && formik.errors.email}
-          helperColor={formik.errors.email ? "error" : "primary"}
-          type="email"
-          name="email"
-          label="Email"
-          fullWidth
-        />
-        <Spacer y={1.5} />
-        <Input.Password
-          css={{ $$inputColor: "#272727" }}
-          placeholder="Masukkan password kamu"
-          size="md"
-          helperText={touched && formik.errors.password}
-          helperColor={formik.errors.password ? "error" : "primary"}
-          onChange={formik.handleChange}
-          type="password"
-          name="password"
-          label="Password"
-          fullWidth
-        />
-        <Text
-          onClick={() => setState("forgotPassword")}
-          size={"0.8rem"}
-          className="text-right cursor-pointer select-none"
-        >
-          Lupa password?
-        </Text>
-        <Spacer y={1.5} />
-        <Button
-          style={{
-            width: "100%",
-          }}
-          flat
-          className="bg-[#06381b]"
-          color="primary"
-          onClick={async () => {
-            setTouched(true);
-            const errors = await formik.validateForm();
-            if (Object.keys(errors).length === 0) {
-              setLoading(true);
-              authService
-                .login(formik.values.email, formik.values.password)
-                .then((res) => {
-                  localStorage.setItem("user", JSON.stringify(res.data));
-                  Router.push("/dashboard");
-                })
-                .catch((error) => {
-                  switch (error.response.data.message) {
-                    case "Incorrect email or password":
-                      toast.error("Email atau password salah");
-                      break;
-                    case "Cannot login with email and password, use google instead":
-                      toast.error(
-                        "Email kamu sudah terdaftar menggunakan Google"
-                      );
-                      break;
-                    default:
-                      break;
-                  }
-                })
-                .finally(() => {
-                  setLoading(false);
-                });
-            }
-          }}
-        >
-          {isLoading ? <Loading /> : "Masuk"}
-        </Button>
-      </form>
+        {isLoading ? <Loading /> : "Masuk"}
+      </Button>
       <Spacer y={2} />
       <Spacer y={0.5} />
       <Button
