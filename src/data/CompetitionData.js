@@ -25,13 +25,13 @@ export const CompetitionData = [
     data: "Internet Of Things Development Competition adalah lomba pengembangan teknologi berupa aplikasi (software) yang terintegrasi dengan alat (hardware) melalui jaringan internet dan sejenisnya yang dapat diikuti oleh masyarakat umum. Internet Of Things Development Competition bertujuan untuk mengembangkan ide kreatif yang dapat menyelesaikan masalah dengan hasil keluaran (output) berupa software dengan platform mobile disertai hardware-nya.",
     kategori: "Terbuka untuk masyarakat umum, berkelompok maksimal 3 orang",
     kontak: "Kenanya 0888-4872-592",
-    guidebokk:
+    guidebook:
       "https://firebasestorage.googleapis.com/v0/b/mage8-657e0.appspot.com/o/resources%2Fguidebook%2FGuidebook%20IoT.pdf?alt=media&token=141f0ab0-0264-4c7d-932d-4ffd75045cbc",
   },
   {
     image: "static/logo/Olim.png",
     title: "PROXY",
-    data: "PROXY (Programming and Computer Competition x Computer Engineering ITS) merupakan sebuah ajang olimpiade yang diselenggarakan oleh Teknik Komputer ITS. PROXY bertujuan untuk menguji kemampuan siswa/i Indonesia dalam menyelesaikan soal-soal terkait logika dan pemrograman",
+    data: "PROXY (Programming and Computer Competition x Computer Engineering ITS) merupakan sebuah ajang olimpiade yang diselenggarakan oleh Teknik Komputer ITS. PROXY bertujuan untuk menguji kemampuan siswa/i Indonesia dalam menyelesaikan soal-soal terkait logika, fisika, dan pemrograman",
     kategori:
       "Terbuka untuk siswa/i SMA/MA/SMK atau sederajat, berkelompok maksimal 3 orang",
     kontak: "Daffa 0822-8924-7001",
