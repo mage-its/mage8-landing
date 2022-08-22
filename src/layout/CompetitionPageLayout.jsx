@@ -16,6 +16,7 @@ export default function index(props) {
           alt={props.judulCompe}
           height={400}
           width={400}
+          objectFit="scale-down"
         />
       </div>
 

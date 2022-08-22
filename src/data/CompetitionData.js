@@ -1,6 +1,6 @@
 export const CompetitionData = [
   {
-    image: "static/logo/Appdev.png",
+    image: "static/logo/AppDevLogo.png",
     title: "Application Development",
     data: "Application Development adalah lomba pengembangan aplikasi untuk siswa SMA/SMK/Sederajat dan mahasiswa dalam mengembangkan ide kreatif untuk menyelesaikan masalah di Indonesia dalam bentuk aplikasi mobile, web dan desktop.",
     kategori:
