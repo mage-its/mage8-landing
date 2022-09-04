@@ -153,11 +153,11 @@ export default function Navbar() {
                     </div>
                   </Link>
 
-                  <Link href="/competition/iotdev">
+                  {/* <Link href="/competition/iotdev">
                     <div className="hover:bg-slate-50/5 w-full py-2 px-3 rounded-lg cursor-pointer">
                       IoT Development
                     </div>
-                  </Link>
+                  </Link> */}
                   <Link href="/competition/olim">
                     <div className="hover:bg-slate-50/5 w-full py-2 px-3 rounded-lg cursor-pointer">
                       Olimpiade
@@ -258,12 +258,12 @@ export default function Navbar() {
                     Game Development
                   </div>
                 </Link>
-                <Link href="/competition/iotdev">
+                {/* <Link href="/competition/iotdev">
                   <div className="flex flex-row gap-1">
                     <IconPoint className="w-2 fill-gray-500" />
                     IoT Development
                   </div>
-                </Link>
+                </Link> */}
                 <Link href="/competition/olim">
                   <div className="flex flex-row gap-1">
                     <IconPoint className="w-2 fill-gray-500" />
