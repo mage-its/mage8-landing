@@ -40,11 +40,11 @@ export default function Footer() {
                   Game Development
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/competition/iotdev" className="hover:underline">
                   IoT Development
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/competition/olim" className="hover:underline">
                   Olimpiade
