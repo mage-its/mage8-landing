@@ -12,6 +12,10 @@ export const DataTimelineProxy = [
     tanggal: "4 November 2022",
   },
   {
+    judul: "Technical Meeting Penyisihan",
+    tanggal: "5 November 2022",
+  },
+  {
     judul: "Babak Penyisihan",
     tanggal: "6 November 2022",
   },
