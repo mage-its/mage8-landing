@@ -129,14 +129,14 @@ export default function Home() {
               image={AppDevLogo}
               link="/competition/appdev"
             />
-            <CompetitionCard
+            {/* <CompetitionCard
               big
               title="IoT Development"
               kategori="Umum"
               harga="Rp.110.000,-"
               image={IoTDevLogo}
               link="/competition/iotdev"
-            />
+            /> */}
             <CompetitionCard
               big
               title="Olimpiade"
