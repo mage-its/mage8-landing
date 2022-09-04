@@ -5,23 +5,31 @@ export const DevcomTimeline = [
   },
   {
     judul: "Close Registrasi DevCom",
-    tanggal: "17 September 2022",
-  },
-  {
-    judul: "Pengumuman Tahap 1",
     tanggal: "24 September 2022",
   },
   {
+    judul: "Pengumuman Tahap 1",
+    tanggal: "5 Oktober 2022",
+  },
+  {
     judul: "Open Pengumpulan Karya dan Video",
-    tanggal: "25 September 2022",
+    tanggal: "5 Oktober 2022",
+  },
+  {
+    judul: "Batas Pembayaran Tahap 2",
+    tanggal: "11 Oktober 2022",
   },
   {
     judul: "Batas Pengumpulan Karya dan Video",
-    tanggal: "25 Oktober 2022",
+    tanggal: "28 Oktober 2022",
   },
   {
     judul: "Pengumuman Finalis DevCom",
-    tanggal: "30 Oktober 2022",
+    tanggal: "5 November 2022",
+  },
+  {
+    judul: "Technical Meeting Finalis",
+    tanggal: "6 November 2022",
   },
   {
     judul: "Exhibition Finalis Dibuka",
