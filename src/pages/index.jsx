@@ -87,7 +87,7 @@ export default function Home() {
               span
               className="text-3xl sm:text-6xl text-center md:text-6xl xl:text-8xl 2xl:text-9xl font-bold top-5 right-0 animate-text"
             >
-              Rp. 33.500.000,-
+              Rp. 12.250.000,-
             </Text>
             <div className="text-lg text-center absolute left-[-1%] 2xl:left-[-5%] top-[-15%] sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-bold">
               Total Hadiah Senilai
