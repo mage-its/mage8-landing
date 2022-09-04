@@ -224,6 +224,7 @@ export default function Navbar() {
       >
         <motion.div
           className="absolute top-0 left-0 bottom-0 w-full pt-28 px-8 h-screen bg-black/90 backdrop-blur-sm -z-10"
+          style={{ pointerEvents: isOpen ? "auto" : "none" }}
           variants={sidebar}
         >
           <div className="flex flex-col justify-start gap-6 text-lg">
