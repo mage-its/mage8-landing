@@ -9,6 +9,7 @@ import AppDevLogo from "@/assets/images/logo/AppDevLogo.png";
 import GameDevLogo from "@/assets/images/logo/GameDev.png";
 import IoTDevLogo from "@/assets/images/logo/IoTDev.png";
 import OlimpiadeLogo from "@/assets/images/logo/Olim.png";
+import Sponsor from "@/components/Sponsor";
 import MageGlowLogo from "@/assets/images/logo/mage-glow.svg";
 
 export default function Home() {
@@ -146,6 +147,7 @@ export default function Home() {
               link="/competition/olim"
             />
           </div>
+          <Sponsor></Sponsor>
         </div>
       </Layout>
     </>
