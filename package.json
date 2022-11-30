@@ -27,7 +27,7 @@
     "react-dom": "18.2.0",
     "react-google-recaptcha-v3": "^1.10.0",
     "react-icons": "^4.4.0",
-    "react-toastify": "^9.0.8",
+    "react-toastify": "^9.1.1",
     "sharp": "^0.30.7",
     "tailwindcss-border-gradient-radius": "^3.0.1",
     "usehooks-ts": "^2.6.0",
